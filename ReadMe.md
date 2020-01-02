@@ -1,5 +1,10 @@
 # "*Werkzeuge zur Visualisierung*"
 
+## Intro "Data Visualization"
+
+* [Quantitative Daten](Data-Visualization/Quantitiative-Daten.ipynb)
+* [Qualitative Daten](Data-Visualization/Qualitative-Daten.ipynb)
+
 Mehr Informationen [hier](https://www.overleaf.com/read/svmvdrtrytrd) zu finden.
 
 ## Quellen
