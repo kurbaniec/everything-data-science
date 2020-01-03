@@ -4,6 +4,7 @@
 
 * [Quantitative Daten](Data-Visualization/Quantitative-Daten.ipynb)
 * [Qualitative Daten](Data-Visualization/Qualitative-Daten.ipynb)
+* [Prinzipien-der-Visualisierung](Data-Visualization/Prinzipien-der-Visualisierung.ipynb)
 
 Mehr Informationen [hier](https://www.overleaf.com/read/svmvdrtrytrd) zu finden.
 
