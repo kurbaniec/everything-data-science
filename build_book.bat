@@ -1,0 +1,2 @@
+set current_dir=%cd%
+START cmd.exe /C "rmdir _build /Q /S  & rmdir _site /Q /S & timeout 2 & cd .. & jupyter-book build %cd% & cd %cd% & bash -c -i 'bundle exec jekyll build' & ghp-import -n -p -f _site"
