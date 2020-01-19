@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Data Visualization</title>
-  <meta name="description" content="        Data Visualization    Data Visualization Es soll das Kapitel "Data Visualization" im Buch "Principles and Techniques of Data Science" (Sam Lau &amp; ...">
+  <title>Aufsetzen von Jupter-Lab</title>
+  <meta name="description" content="## Aufsetzen von Jupter-LabUm Jupter-Lab einfach zu benutzen wird die Anaconda Disitribution für Python/R empfohlen.Diese kann unter folgenden [Link](https:/...">
 
-  <link rel="canonical" href="http://localhost:4000/everything-data-science/data-visualization/intro.html">
+  <link rel="canonical" href="http://localhost:4000/everything-data-science/content/setup.html">
   <link rel="alternate" type="application/rss+xml" title="Everything Data Science" href="http://localhost:4000/everything-data-science/feed.xml">
 
-  <meta property="og:url"         content="http://localhost:4000/everything-data-science/data-visualization/intro.html" />
+  <meta property="og:url"         content="http://localhost:4000/everything-data-science/content/setup.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Data Visualization" />
-<meta property="og:description" content="        Data Visualization    Data Visualization Es soll das Kapitel "Data Visualization" im Buch "Principles and Techniques of Data Science" (Sam Lau &amp; ..." />
+<meta property="og:title"       content="Aufsetzen von Jupter-Lab" />
+<meta property="og:description" content="## Aufsetzen von Jupter-LabUm Jupter-Lab einfach zu benutzen wird die Anaconda Disitribution für Python/R empfohlen.Diese kann unter folgenden [Link](https:/..." />
 <meta property="og:image"       content="http://localhost:4000/everything-data-science/images/logo/logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -24,11 +24,11 @@
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage": "http://localhost:4000/everything-data-science/data-visualization/intro.html",
-  "headline": "Data Visualization",
+  "mainEntityOfPage": "http://localhost:4000/everything-data-science/content/setup.html",
+  "headline": "Aufsetzen von Jupter-Lab",
   "datePublished": "2020-01-19T22:47:49+01:00",
   "dateModified": "2020-01-19T22:47:49+01:00",
-  "description": "        Data Visualization    Data Visualization Es soll das Kapitel "Data Visualization" im Buch "Principles and Techniques of Data Science" (Sam Lau &amp; ...",
+  "description": "## Aufsetzen von Jupter-LabUm Jupter-Lab einfach zu benutzen wird die Anaconda Disitribution für Python/R empfohlen.Diese kann unter folgenden [Link](https:/...",
   "author": {
     "@type": "Person",
     "name": "Kacper Urbaniec"
@@ -573,46 +573,66 @@ initFunction(initPrint)
 
       <main class="c-textbook__page" tabindex="-1">
             <div class="c-textbook__content" id="textbook_content">
-                  <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">Data Visualization</div>
-</div>
-    <div class="jb_cell">
+              <h2 id="aufsetzen-von-jupter-lab">Aufsetzen von Jupter-Lab</h2>
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Visualization">Data Visualization<a class="anchor-link" href="#Data-Visualization"> </a></h1><p>Es soll das Kapitel "Data Visualization" im Buch "Principles and Techniques of Data Science" <a class="citation" href="#principles_and_techniques_of_data_science">(Sam Lau &amp; Nolan, n.d.)</a> als Jupyter-Notebook umgesetzt werden und entsprechend erläutert werden. Dabei soll zwischen Python und R unterschieden werden.</p>
-<p><ol class="bibliography"><li><span id="principles_and_techniques_of_data_science">Sam Lau, J. G., &amp; Nolan, D. Principles and Techniques of Data Science. Retrieved from https://www.textbook.ds100.org/intro.html</span></li></ol></p>
+<p>Um Jupter-Lab einfach zu benutzen wird die Anaconda Disitribution für Python/R empfohlen.</p>
 
-</div>
-</div>
-</div>
-</div>
+<p>Diese kann unter folgenden <a href="https://www.anaconda.com/distribution/">Link</a> heruntergeladen werden.</p>
 
- 
+<p>Wenn Anaconda erfolgreich installiert wurde, kann man mit folgenden Befehlen die Programmiersprache R und alle benötigten Dependencies für Jupyter installieren. <a class="citation" href="#jupyter">(Project, n.d.)</a>, <a class="citation" href="#jupyterwidgets">(Project, n.d.)</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install -c r r-irkernel
+pip install seaborn 
+pip install matplotlib
+pip install ipywidgets
+pip install nbinteract
+pip install pandas
+pip install tzlocal
+jupyter labextension install @jupyter-widgets/jupyterlab-manager  
+jupyter nbextension enable --py widgetsnbextension --sys-prefix 
+</code></pre></div></div>
+
+<p>Jupyter sollte jetzt mit folgenden Befehl startklar sein:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jupyter-lab
+</code></pre></div></div>
+
+<h2 id="python-und-r-gemeinsam-ausführen">Python und R gemeinsam ausführen</h2>
+
+<p>Um R Befehle in gemeinsam mit Python Befehlen in einen Jupyter-(Python)-Notebook zu benutzen, kann man das Package <code class="language-plaintext highlighter-rouge">rpy2</code>verwendet werden.</p>
+
+<p>Linux und Unix Benutzer können das Paket mithilfe von pip installieren, unter Windows funktioniert dies nicht, dafür gibt es aber schon fertige Windows Binaries, die <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2">hier</a> zu finden sind. <a class="citation" href="#jupyterpythonandr">(Overflow, n.d.)</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Linux/Unix
+pip install rpy2
+# Windows
+pip install .\rpy2-2.9.5-cp37-cp37m-win_amd64.whl
+</code></pre></div></div>
+
+<p>Damit <code class="language-plaintext highlighter-rouge">rpy2</code>ordnungsmäßig funktioniert, müssen <code class="language-plaintext highlighter-rouge">R\_HOME</code> und <code class="language-plaintext highlighter-rouge">R\_USER</code>in den Systemumgebungsvariablen gesetzt werden. Windows Benutzer können folgende <a href="https://en.it1352.com/article/a7469d375f9b40f9b2f4f52567f243ab.html">Hilfestellung</a> verwenden.</p>
+
+<p><img src="/everything-data-science/content/images/r_properties.png" alt="Systemvariablen" /></p>
+
+<h2 id="jupyter-lab-tastenkürzel">Jupyter-Lab Tastenkürzel</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">B</code> - Neuer Codeblock</li>
+  <li><code class="language-plaintext highlighter-rouge">ESC-M-Enter</code> - Block zu Markdown umwandeln</li>
+  <li><code class="language-plaintext highlighter-rouge">ESC-A-Enter</code> - Block zu Code umwandeln</li>
+  <li><code class="language-plaintext highlighter-rouge">ESC-R-Enter</code> - Block zu Raw umwandeln.</li>
+</ul>
+
+<ol class="bibliography"><li><span id="jupyter">Project, J. JupyterLab Documentation. Retrieved from https://jupyterlab.readthedocs.io/en/stable/index.html</span></li>
+<li><span id="jupyterwidgets">Project, J. Jupyter Widgets. Retrieved from https://ipywidgets.readthedocs.io/en/latest/user_install.html</span></li>
+<li><span id="jupyterpythonandr">Overflow, S. R and Python in one Jupyter notebook. Retrieved from https://stackoverflow.com/a/41889995</span></li></ol>
 
 
-    </main>
-    
             </div>
             <div class="c-textbook__footer" id="textbook_footer">
               
 <nav class="c-page__nav">
   
-    
-    
 
-    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/everything-data-science/setup.html">
-      〈 <span class="u-margin-right-tiny"></span> Setup
-    </a>
-  
-
-  
-    
-
-    
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/everything-data-science/data-visualization/quantitative-daten.html">
-      Quantitative Daten <span class="u-margin-right-tiny"></span> 〉
-    </a>
   
 </nav>
 
