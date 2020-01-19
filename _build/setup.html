@@ -1,0 +1,64 @@
+---
+title: |-
+  Setup
+pagenum: 1
+prev_page:
+  url: /intro.html
+next_page:
+  url: /data-visualization/intro.html
+suffix: .md
+search: install r jupyter pip zu rpy lab python und windows die anaconda kann folgenden werden mit cite esc enter block umwandeln von jupter um benutzen fr unter www com man befehlen installieren gemeinsam das linux unix benutzer knnen funktioniert aufsetzen einfach wird disitribution empfohlen diese link distribution heruntergeladen wenn erfolgreich installiert wurde programmiersprache alle bentigten dependencies jupyterwidgets conda c irkernel seaborn matplotlib ipywidgets nbinteract pandas tzlocal labextension widgets jupyterlab manager nbextension enable py widgetsnbextension sys prefix sollte jetzt befehl startklar sein ausfhren befehle einen notebook package verwendet paket mithilfe dies nicht dafr gibt es aber schon fertige binaries hier lfd
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Setup</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufsetzen-von-Jupter-Lab">Aufsetzen von Jupter-Lab<a class="anchor-link" href="#Aufsetzen-von-Jupter-Lab"> </a></h2><p>Um Jupter-Lab einfach zu benutzen wird die Anaconda Disitribution für Python/R empfohlen.</p>
+<p>Diese kann unter folgenden <a href="https://www.anaconda.com/distribution/">Link</a> heruntergeladen werden.</p>
+<p>Wenn Anaconda erfolgreich installiert wurde, kann man mit folgenden Befehlen die Programmiersprache R und alle benötigten Dependencies für Jupyter installieren. {% cite jupyter %}, {% cite jupyterwidgets %}</p>
+
+<pre><code>conda install -c r r-irkernel
+pip install seaborn 
+pip install matplotlib
+pip install ipywidgets
+pip install nbinteract
+pip install pandas
+pip install tzlocal
+jupyter labextension install @jupyter-widgets/jupyterlab-manager  
+jupyter nbextension enable --py widgetsnbextension --sys-prefix</code></pre>
+<p>Jupyter sollte jetzt mit folgenden Befehl startklar sein:</p>
+
+<pre><code>jupyter-lab</code></pre>
+<h2 id="Python-und-R-gemeinsam-ausf&#252;hren">Python und R gemeinsam ausf&#252;hren<a class="anchor-link" href="#Python-und-R-gemeinsam-ausf&#252;hren"> </a></h2><p>Um R Befehle in gemeinsam mit Python Befehlen in einen Jupyter-(Python)-Notebook zu benutzen, kann man das Package <code>rpy2</code>verwendet werden.</p>
+<p>Linux und Unix Benutzer können das Paket mithilfe von pip installieren, unter Windows funktioniert dies nicht, dafür gibt es aber schon fertige Windows Binaries, die <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2">hier</a> zu finden sind. {% cite jupyterpythonandr %}</p>
+
+<pre><code># Linux/Unix
+pip install rpy2
+# Windows
+pip install .\rpy2-2.9.5-cp37-cp37m-win_amd64.whl</code></pre>
+<p>Damit <code>rpy2</code>ordnungsmäßig funktioniert, müssen <code>R\_HOME</code> und <code>R\_USER</code>in den Systemumgebungsvariablen gesetzt werden. Windows Benutzer können folgende <a href="https://en.it1352.com/article/a7469d375f9b40f9b2f4f52567f243ab.html">Hilfestellung</a> verwenden.</p>
+<p><img src="images/r_properties.png" alt="Systemvariablen"></p>
+<h2 id="Jupyter-Lab-Tastenk&#252;rzel">Jupyter-Lab Tastenk&#252;rzel<a class="anchor-link" href="#Jupyter-Lab-Tastenk&#252;rzel"> </a></h2><ul>
+<li><code>B</code> - Neuer Codeblock</li>
+<li><code>ESC-M-Enter</code> - Block zu Markdown umwandeln</li>
+<li><code>ESC-A-Enter</code> - Block zu Code umwandeln</li>
+<li><code>ESC-R-Enter</code> - Block zu Raw umwandeln.</li>
+</ul>
+<p>{% bibliography --cited %}</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

@@ -26,6 +26,10 @@
   url: /intro
   not_numbered: true
 
+- title: Setup
+  url: /setup
+  not_numbered: true
+
 # External link
 - title: GitHub repository
   url: https://github.com/kurbaniec-tgm/jupyter-book-test
