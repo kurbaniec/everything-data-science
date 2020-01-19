@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>Qualitative Daten</title>
+  <meta name="description" content="        Qualitative Daten    Qualitative Daten Bei Qualitativen Daten handelt es sich um nicht numerische, meist verschriftlichen Daten.Zur Visualisierung vo...">
+
+  <link rel="canonical" href="http://localhost:4000/jupyter-book-test/data-visualization/qualitative-daten.html">
+  <link rel="alternate" type="application/rss+xml" title="Everything Data Science" href="http://localhost:4000/jupyter-book-test/feed.xml">
+
+  <meta property="og:url"         content="http://localhost:4000/jupyter-book-test/data-visualization/qualitative-daten.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Qualitative Daten" />
+<meta property="og:description" content="        Qualitative Daten    Qualitative Daten Bei Qualitativen Daten handelt es sich um nicht numerische, meist verschriftlichen Daten.Zur Visualisierung vo..." />
+<meta property="og:image"       content="http://localhost:4000/jupyter-book-test/images/logo/logo.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": "http://localhost:4000/jupyter-book-test/data-visualization/qualitative-daten.html",
+  "headline": "Qualitative Daten",
+  "datePublished": "2020-01-19T21:19:02+01:00",
+  "dateModified": "2020-01-19T21:19:02+01:00",
+  "description": "        Qualitative Daten    Qualitative Daten Bei Qualitativen Daten handelt es sich um nicht numerische, meist verschriftlichen Daten.Zur Visualisierung vo...",
+  "author": {
+    "@type": "Person",
+    "name": "Kacper Urbaniec"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Data 100 at UC Berkeley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:4000/jupyter-book-test",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http://localhost:4000/jupyter-book-test",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/jupyter-book-test/assets/css/styles.css">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/jupyter-book-test/images/logo/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
+    },
+    
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
+
+
+  <!-- DOM updating function -->
+  <script src="/jupyter-book-test/assets/js/page/dom-update.js"></script>
+
+  <!-- Selectors for elements on the page -->
+  <script src="/jupyter-book-test/assets/js/page/documentSelectors.js"></script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '/jupyter-book-test';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
+  <script src="/jupyter-book-test/assets/js/page/anchors.js" async></script>
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Load nbinteract for widgets -->
+  
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+
+  <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.8.1/tocbot.min.js" async></script>
+  <script src="/jupyter-book-test/assets/js/page/tocbot.js"></script>
+
+  <!-- Google analytics -->
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
+
+  <!-- Load custom website scripts -->
+  <script src="/jupyter-book-test/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/jupyter-book-test/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/jupyter-book-test/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+
+  <!-- Load JS that depends on site variables -->
+  <script src="/jupyter-book-test/assets/js/page/copy-button.js" async></script>
+
+  <!-- Hide cell code -->
+  <script src="/jupyter-book-test/assets/js/page/hide-cell.js" async></script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/jupyter-book-test/assets/css/styles.css",
+        style: "#textbook_content {padding-top: 40px};",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList,
+        documentTitle: "Made with Jupyter Book"
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
+</head>
+
+  <body>
+    <!-- Include the ThebeLab config so it gets reloaded on each page -->
+    <script type="text/x-thebe-config">{
+    requestKernel: true,
+    binderOptions: {
+    repo: "YOUR-ORG/YOUR-REPO",
+    ref: "gh-pages",
+    },
+    codeMirrorConfig: {
+    theme: "abcdef",
+    mode: "python"
+    },
+    kernelOptions: {
+    kernelName: "python3",
+    path: "content/data-visualization"
+    }
+}
+</script>
+
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  <a href="https://jupyterbook.org/"><img src="/jupyter-book-test/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">Everything Data Science</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/intro">
+        <a class="c-sidebar__entry"
+          href="/jupyter-book-test/intro.html"
+        >
+          
+          Home
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="https://github.com/kurbaniec-tgm/jupyter-book-test">
+        <a class="c-sidebar__entry"
+          href="https://github.com/kurbaniec-tgm/jupyter-book-test"
+        >
+          
+          GitHub repository
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/data-visualization/intro">
+        <a class="c-sidebar__entry"
+          href="/jupyter-book-test/data-visualization/intro.html"
+        >
+          
+          Data Visualization
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-visualization/quantitative-daten">
+              <a class="c-sidebar__entry"
+                href="/jupyter-book-test/data-visualization/quantitative-daten.html"
+              >
+                
+                Quantitative Daten
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-visualization/qualitative-daten">
+              <a class="c-sidebar__entry"
+                href="/jupyter-book-test/data-visualization/qualitative-daten.html"
+              >
+                
+                Qualitative Daten
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-visualization/anpassung-von-plots">
+              <a class="c-sidebar__entry"
+                href="/jupyter-book-test/data-visualization/anpassung-von-plots.html"
+              >
+                
+                Anpassung von Plots
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung">
+        <a class="c-sidebar__entry"
+          href="/jupyter-book-test/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung.html"
+        >
+          
+          Werkzeuge zur Visualisierung
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+  </ul>
+  <p class="sidebar_footer"></p>
+</nav>
+
+      
+      <div class="c-topbar" id="top-navbar">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+<div class="download-buttons-dropdown">
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/jupyter-book-test/assets/images/download-solid.svg" alt="Download" /></button>
+    <div class="download-buttons">
+        <a href="/jupyter-book-test/content/data-visualization/qualitative-daten.ipynb" download>
+        <button id="interact-button-download" class="interact-button">.ipynb</button>
+        </a>
+        
+        <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
+    </div>
+</div>
+
+
+  
+  
+  
+  
+
+
+</div>
+
+  </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><img src="/jupyter-book-test/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/jupyter-book-test/search.html" class="topbar-right-button" id="search-button">
+    <img src="/jupyter-book-test/assets/images/search-solid.svg" alt="Search" />
+  </a>
+</div>
+
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
+                  <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Qualitative Daten</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Qualitative-Daten">Qualitative Daten<a class="anchor-link" href="#Qualitative-Daten"> </a></h1><p>Bei Qualitativen Daten handelt es sich um nicht numerische, meist verschriftlichen Daten.</p>
+<p>Zur Visualisierung von quantitativen Daten werden meist Säulendiagramme und Streudiagramme verwendet.</p>
+<p>Zur Darstellung in Python kann die <code>seaborn</code> Plotting Library verwendet werden. Die nächsten Beispiele werden mit dieser Library und dem Datensatz Titanic (<code>titanic.csv</code>) realisiert.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HIDDEN</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="c1"># Ignore numpy dtype warnings. These warnings are caused by an interaction</span>
+<span class="c1"># between numpy and Cython and can be safely ignored.</span>
+<span class="c1"># Reference: https://stackoverflow.com/a/40846742</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;numpy.dtype size changed&quot;</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;numpy.ufunc size changed&quot;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">nbinteract</span> <span class="k">as</span> <span class="nn">nbi</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s1">&#39;talk&#39;</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">threshold</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;precision&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># This option stops scientific notation for pandas</span>
+<span class="c1"># pd.set_option(&#39;display.float_format&#39;, &#39;{:.2f}&#39;.format)</span>
+
+<span class="k">def</span> <span class="nf">df_interact</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Outputs sliders that show rows and columns of df</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">row</span><span class="p">:</span><span class="n">row</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">col</span><span class="p">:</span><span class="n">col</span> <span class="o">+</span> <span class="mi">8</span><span class="p">]</span>
+    <span class="n">interact</span><span class="p">(</span><span class="n">peek</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="mi">5</span><span class="p">),</span> <span class="n">col</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">-</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(</span><span class="si">{}</span><span class="s1"> rows, </span><span class="si">{}</span><span class="s1"> columns) total&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+    
+<span class="c1"># Import seaborn and apply its plotting styles</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load the dataset in Python</span>
+<span class="c1"># Use seaborn github dataset: ti = sns.load_dataset(&#39;titanic&#39;).reset_index(drop=True)</span>
+<span class="c1"># Load dataset locally</span>
+<span class="n">ti</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/titanic-seaborn.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># This table is too large to fit onto a page so we&#39;ll output sliders to</span>
+<span class="c1"># pan through different sections.</span>
+<span class="c1"># df_interact(ti)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HIDDEN</span>
+<span class="c1"># Enable R in Python notebook</span>
+<span class="o">%</span><span class="k">load_ext</span> rpy2.ipython
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Init libraries</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;lmtest&quot;</span><span class="p">,</span> <span class="n">repos</span><span class="o">=</span><span class="s">&quot;https://cran.wu.ac.at/&quot;</span><span class="p">)</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;vcd&quot;</span><span class="p">,</span> <span class="n">repos</span><span class="o">=</span><span class="s">&quot;https://cran.wu.ac.at/&quot;</span><span class="p">)</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">,</span> <span class="n">repos</span><span class="o">=</span><span class="s">&quot;https://cran.wu.ac.at/&quot;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">vcd</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Load the dataset in R and drop N/A values to make plot function calls simpler</span>
+<span class="n">ti</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;../data/titanic-seaborn.csv&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;,&quot;</span><span class="p">)</span>
+
+<span class="c1"># Calculate confidence interval: https://www.cyclismo.org/tutorial/R/confidence.html</span>
+<span class="n">ci</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">qnorm</span><span class="p">(</span><span class="m">0.975</span><span class="p">)</span><span class="o">*</span><span class="nf">sd</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="c1"># Plot only text</span>
+<span class="c1"># Source: https://stackoverflow.com/a/19920666/12347616</span>
+<span class="n">ptext</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">out</span> <span class="o">&lt;-</span> <span class="nf">toString</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="nf">par</span><span class="p">(</span><span class="n">mar</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">))</span>
+    <span class="nf">plot</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span> <span class="n">ann</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span> <span class="n">bty</span> <span class="o">=</span> <span class="s">&#39;n&#39;</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&#39;n&#39;</span><span class="p">,</span> <span class="n">xaxt</span> <span class="o">=</span> <span class="s">&#39;n&#39;</span><span class="p">,</span> <span class="n">yaxt</span> <span class="o">=</span> <span class="s">&#39;n&#39;</span><span class="p">)</span>
+    <span class="nf">text</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span> <span class="nf">paste</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="n">cex</span> <span class="o">=</span> <span class="m">1.6</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="s">&quot;black&quot;</span><span class="p">)</span>
+    <span class="nf">par</span><span class="p">(</span><span class="n">mar</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span> <span class="o">+</span> <span class="m">0.1</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Balkendiagramm-(Bar-Charts)">Balkendiagramm (Bar Charts)<a class="anchor-link" href="#Balkendiagramm-(Bar-Charts)"> </a></h2><p>Ein Balkendiagramm bzw Säulendiagramm ist ein Diagramm, das kategoriale Daten mit rechteckigen Balken mit Höhen oder Längen proportional zu den Werten, die sie repräsentieren, darstellt.</p>
+<p>In <code>seaborn</code> gibt es zwei Arten von Balkendiagrammen. Der erste Typ <code>countplot</code> zählt die Anzahl, wie oft eine Kategorie in einer Spalte vorkommt. In R benutzt erstellt man eine Häufigkeitstabelle mit dem Befehl <code>table</code> und plottet dann das Balkendiagramm mit der Tabelle via <code>barplot</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Counts how many passengers survived and didn&#39;t survive and</span>
+<span class="c1"># draws bars with corresponding heights</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;alive&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_7_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Countplots in R: https://www.statmethods.net/graphs/bar.html</span>
+<span class="c1"># Create counts from alive column</span>
+<span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">alive</span><span class="p">)</span>
+<span class="nf">barplot</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;dodgerblue4&quot;</span><span class="p">,</span> <span class="s">&quot;chocolate&quot;</span><span class="p">),</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;count&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_8_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_9_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class</span><span class="p">)</span>
+<span class="c1"># Order like seaborn: https://stackoverflow.com/a/56808968</span>
+<span class="nf">barplot</span><span class="p">(</span><span class="nf">sort</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">decreasing</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;dodgerblue4&quot;</span><span class="p">,</span> <span class="s">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s">&quot;forestgreen&quot;</span><span class="p">),</span>
+    <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;class&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;count&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_10_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># As with box plots, we can break down each category further using color</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;alive&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_11_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Form a table with columns class and rows alive</span>
+<span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">alive</span><span class="p">)</span>
+<span class="c1"># Order like seaborn: https://stackoverflow.com/a/56808968</span>
+<span class="nf">barplot</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s">&quot;forestgreen&quot;</span><span class="p">,</span> <span class="s">&quot;dodgerblue4&quot;</span><span class="p">),</span>
+    <span class="n">legend</span> <span class="o">=</span> <span class="nf">rownames</span><span class="p">(</span><span class="n">counts</span><span class="p">),</span> <span class="n">beside</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;count&quot;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_12_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die zweite Funktion in Python <code>barplot</code> gruppiert die Kategorien einer Spalte und bildet für jede Kategorie den Durchschnitt einer angegebenen numerischen Spalte. Im nachfolgenden Beispiel wird für jede Kategorie in der Spalte <code>alive</code> das Durchschnittsalter für die Kategorie mtithilfe den Daten aus der Spalte <code>age</code> gebildet.</p>
+<p>Standardmäßig wird auch ein 95% Konfidenzintervall für jeden gemittelten Wert generiert, der als schwarze Linien im Balkendiagramm oben markiert ist. Die Konfidenzintervalle zeigen, dass, wenn der Datensatz eine Zufallsstichprobe von Titanic-Passagieren enthielt, der Unterschied zwischen dem Alter der Passagiere, die überlebt haben und denen, die nicht überlebt haben, nicht statistisch signifikant ist.</p>
+<p>In R ist die Umsetzung mehr anspruchsvoll, denn man muss sich manuell die Durchnittswerte und Konfidenzintervalle ausrechnen. Weiters unterstützt die <code>barplot</code> Funktion keine Konfidenzintervalle, man muss diese mit dem Befehl <code>arrow</code> zum Plot hinzufügen. Dadurch können die Balken im Plot nicht sortiert werden, da sich dann die Konfidenzintervalle an der ursprünglichen Ausrichtung vorfinden würden.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For each set of alive/not alive passengers, compute and plot the average age.</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;alive&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_14_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Boxplot with confidence interval: https://datascienceplus.com/building-barplots-with-error-bars/</span>
+<span class="c1"># Box names: https://stackoverflow.com/a/28417157/12347616</span>
+<span class="n">alive</span> <span class="o">&lt;-</span> <span class="nf">na.omit</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">alive</span><span class="o">==</span><span class="s">&quot;yes&quot;</span><span class="n">]</span><span class="p">)</span>
+<span class="n">dead</span> <span class="o">&lt;-</span> <span class="nf">na.omit</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">alive</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)</span>   
+<span class="n">meanvals</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="n">alive</span><span class="p">),</span> <span class="nf">mean</span><span class="p">(</span><span class="n">dead</span><span class="p">))</span>
+<span class="c1"># Note, sorting the boxes here results in wrong confidence interval arrows later on</span>
+<span class="n">theplot</span> <span class="o">&lt;-</span> <span class="nf">barplot</span><span class="p">(</span><span class="n">meanvals</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s">&quot;dodgerblue4&quot;</span><span class="p">),</span>
+                  <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">35</span><span class="p">),</span> <span class="n">names.arg</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;yes&quot;</span><span class="p">,</span> <span class="s">&quot;no&quot;</span><span class="p">))</span>
+<span class="c1"># Add confidence interval</span>
+<span class="n">civals</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">ci</span><span class="p">(</span><span class="n">alive</span><span class="p">),</span> <span class="nf">ci</span><span class="p">(</span><span class="n">dead</span><span class="p">))</span>
+<span class="nf">arrows</span><span class="p">(</span><span class="n">theplot</span><span class="p">,</span> <span class="n">meanvals</span> <span class="o">-</span> <span class="n">civals</span><span class="p">,</span> <span class="n">theplot</span><span class="p">,</span>
+       <span class="n">meanvals</span> <span class="o">+</span> <span class="n">civals</span><span class="p">,</span> <span class="n">lwd</span> <span class="o">=</span> <span class="m">1.5</span><span class="p">,</span> <span class="n">angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">,</span>
+       <span class="n">code</span> <span class="o">=</span> <span class="m">3</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="m">0.05</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_15_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Eine leicht elegantere Methode Balkendiagramme mit Konfidenzintervallen in R zu bilden, ist die die Verwendung der Library <code>ggplot</code>. Man erspart sich nicht die Berechnungen, aber das Plotten der Intervalle mittels <code>geom_errorbar</code> ist einfacher nachvollzuziehen.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Source: https://www.r-graph-gallery.com/4-barplot-with-error-bar.html</span>
+<span class="n">alive</span> <span class="o">&lt;-</span> <span class="nf">na.omit</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">alive</span><span class="o">==</span><span class="s">&quot;yes&quot;</span><span class="n">]</span><span class="p">)</span>
+<span class="n">dead</span> <span class="o">&lt;-</span> <span class="nf">na.omit</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">alive</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)</span>              
+<span class="n">meanvals</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="n">alive</span><span class="p">),</span> <span class="nf">mean</span><span class="p">(</span><span class="n">dead</span><span class="p">))</span>
+<span class="n">civals</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">ci</span><span class="p">(</span><span class="n">alive</span><span class="p">),</span> <span class="nf">ci</span><span class="p">(</span><span class="n">dead</span><span class="p">))</span>
+
+<span class="n">data</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span>
+  <span class="n">alive</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;yes&quot;</span><span class="p">,</span> <span class="s">&quot;no&quot;</span><span class="p">),</span>
+  <span class="n">age</span><span class="o">=</span><span class="n">meanvals</span><span class="p">,</span>
+  <span class="n">sd</span><span class="o">=</span><span class="n">civals</span>
+<span class="p">)</span>
+ 
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">geom_bar</span><span class="p">(</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">alive</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">age</span><span class="p">),</span> <span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;dodgerblue4&quot;</span><span class="p">,</span> <span class="s">&quot;chocolate&quot;</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="m">0.7</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">geom_errorbar</span><span class="p">(</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">alive</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span><span class="n">age</span><span class="o">-</span><span class="n">sd</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="n">age</span><span class="o">+</span><span class="n">sd</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="m">0.4</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="m">0.9</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">1.3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_17_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Um die numerischen Werte der Balken zu ermitteln, können die folgenden Befehle verwendet werden.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ti</span><span class="p">[[</span><span class="s1">&#39;alive&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;alive&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+    </tr>
+    <tr>
+      <th>alive</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>no</td>
+      <td>30.63</td>
+    </tr>
+    <tr>
+      <td>yes</td>
+      <td>28.34</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Aggregate function: https://stackoverflow.com/a/21983076/12347616</span>
+<span class="c1"># Set names: https://stackoverflow.com/a/15309223/12347616</span>
+<span class="n">result</span> <span class="o">&lt;-</span> <span class="nf">setNames</span><span class="p">(</span><span class="nf">aggregate</span><span class="p">(</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">),</span> <span class="nf">list</span><span class="p">(</span><span class="n">alive</span> <span class="o">=</span> <span class="n">ti</span><span class="o">$</span><span class="n">alive[</span><span class="o">!</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">))</span><span class="n">]</span><span class="p">),</span> <span class="n">mean</span><span class="p">),</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="s">&quot;age&quot;</span><span class="p">))</span>
+<span class="n">result</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Da die Berechnung von Konfidenzintervallen lange dauern kann, vor allem bei größeren Datensätzen, kann man deren automatische Berechnung in Python deaktivieren. In R geschieht dies ohnehin nicht automatisch, also erspart man sich zusätzlichen Code, der für Konfidenzintervalle nötig gewesen wäre.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;alive&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">,</span> <span class="n">ci</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_22_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">alive</span><span class="o">==</span><span class="s">&quot;yes&quot;</span><span class="n">]</span><span class="p">)),</span> <span class="nf">mean</span><span class="p">(</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">alive</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)))</span>
+<span class="nf">barplot</span><span class="p">(</span><span class="nf">sort</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">decreasing</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;age&quot;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;dodgerblue4&quot;</span><span class="p">,</span> <span class="s">&quot;chocolate&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_23_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dot-Plots-(Dot-Charts)">Dot-Plots (Dot Charts)<a class="anchor-link" href="#Dot-Plots-(Dot-Charts)"> </a></h2><p>Dots-Plots bzw. Punktdiagramme kann man sich wie eindimensionale Streudiagramme vorstellen. Sie sind sehr ähnlich zu Balkendiagrammen. Anstatt die Werte als Balken darzustellen, werden diese als einzelne Punkte visualisiert.</p>
+<p>In Python werden Dot-Plots mit der Funktion <code>pointplot</code> erstellt, die auch wieder die Konfidenzintervalle dazu erstellt, die als vertikale Striche über und unter den Punkten dargestellt werden.</p>
+<p>In R ist die Umsetzung ähnlich zu der der Streudiagramme. Kategorien müssen für die Funktion <code>plot</code> numerisch in einen Vektor für die x-Achse eingetragen werden. Wichtig ist, dass man die Namen der Kategorien mittels dem <code>axis</code> Befehls darstellt. Die Konfidenzintervalle müssen wieder manuell berechnet werden.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For each set of alive/not alive passengers, compute and plot the average age.</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;alive&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_25_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Remove axis labels: https://stackoverflow.com/questions/1154242/remove-plot-axis-values</span>
+<span class="c1"># Add own axis labels: https://stackoverflow.com/questions/5182238/replace-x-axis-with-own-values</span>
+<span class="c1"># Draw segment lines: https://stackoverflow.com/a/24933288/12347616</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">alive</span><span class="o">==</span><span class="s">&quot;yes&quot;</span><span class="n">]</span><span class="p">)),</span> <span class="nf">mean</span><span class="p">(</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">alive</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)))</span>
+<span class="n">conf</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">ci</span><span class="p">(</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">alive</span><span class="o">==</span><span class="s">&quot;yes&quot;</span><span class="n">]</span><span class="p">)),</span> <span class="nf">ci</span><span class="p">(</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">alive</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)))</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">xaxt</span><span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;survived&quot;</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">,</span> <span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">27</span><span class="p">,</span> <span class="m">32</span><span class="p">),</span> <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0.8</span><span class="p">,</span> <span class="m">2.2</span><span class="p">))</span>
+<span class="nf">segments</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">conf</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">conf</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="nf">axis</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;yes&quot;</span><span class="p">,</span> <span class="s">&quot;no&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_26_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Dots-Plots sind am sinnvollsten, wenn man mehrere Kategorien miteinander vergleicht.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Shows the proportion of survivors for each passenger class</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;survived&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_28_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;First&quot;</span><span class="n">]</span><span class="p">),</span>
+       <span class="nf">mean</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Second&quot;</span><span class="n">]</span><span class="p">),</span>
+       <span class="nf">mean</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Third&quot;</span><span class="n">]</span><span class="p">))</span>
+<span class="n">conf</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">ci</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;First&quot;</span><span class="n">]</span><span class="p">),</span>
+          <span class="nf">ci</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Second&quot;</span><span class="n">]</span><span class="p">),</span>
+          <span class="nf">ci</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Third&quot;</span><span class="n">]</span><span class="p">))</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">xaxt</span><span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;class&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;survived&quot;</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0.2</span><span class="p">,</span> <span class="m">0.7</span><span class="p">))</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="nf">segments</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">conf</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">conf</span><span class="p">)</span>
+<span class="nf">axis</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;First&quot;</span><span class="p">,</span> <span class="s">&quot;Second&quot;</span><span class="p">,</span> <span class="s">&quot;Third&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_29_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Shows the proportion of survivors for each passenger class,</span>
+<span class="c1"># split by whether the passenger was an adult male</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;survived&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;adult_male&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_30_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;First&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;True&quot;</span><span class="n">]</span><span class="p">),</span> 
+       <span class="nf">mean</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Second&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;True&quot;</span><span class="n">]</span><span class="p">),</span> 
+       <span class="nf">mean</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Third&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;True&quot;</span><span class="n">]</span><span class="p">))</span>
+<span class="n">conf</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">ci</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;First&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;True&quot;</span><span class="n">]</span><span class="p">),</span> 
+          <span class="nf">ci</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Second&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;True&quot;</span><span class="n">]</span><span class="p">),</span> 
+          <span class="nf">ci</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Third&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;True&quot;</span><span class="n">]</span><span class="p">))</span>
+<span class="n">x2</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="n">y2</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;First&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;False&quot;</span><span class="n">]</span><span class="p">),</span> 
+        <span class="nf">mean</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Second&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;False&quot;</span><span class="n">]</span><span class="p">),</span> 
+        <span class="nf">mean</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Third&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;False&quot;</span><span class="n">]</span><span class="p">))</span>
+<span class="n">conf2</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="nf">ci</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;First&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;False&quot;</span><span class="n">]</span><span class="p">),</span> 
+           <span class="nf">ci</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Second&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;False&quot;</span><span class="n">]</span><span class="p">),</span> 
+           <span class="nf">ci</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;Third&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;False&quot;</span><span class="n">]</span><span class="p">))</span>
+
+<span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">xaxt</span><span class="o">=</span><span class="s">&quot;n&quot;</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;class&quot;</span><span class="p">,</span>  <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;survived&quot;</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">,</span>
+     <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0.0</span><span class="p">,</span> <span class="m">1.0</span><span class="p">))</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">lwd</span><span class="o">=</span><span class="m">3</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">))</span>
+<span class="nf">segments</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">conf</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">conf</span><span class="p">,</span> <span class="n">lwd</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">))</span>
+<span class="nf">points</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;dodgerblue4&quot;</span><span class="p">))</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">lwd</span><span class="o">=</span><span class="m">3</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;dodgerblue4&quot;</span><span class="p">))</span>
+<span class="nf">segments</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="o">-</span><span class="n">conf2</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="o">+</span><span class="n">conf2</span><span class="p">,</span> <span class="n">lwd</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;dodgerblue4&quot;</span><span class="p">))</span>
+<span class="nf">axis</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;First&quot;</span><span class="p">,</span> <span class="s">&quot;Second&quot;</span><span class="p">,</span> <span class="s">&quot;Third&quot;</span><span class="p">))</span>
+<span class="nf">legend</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&quot;topright&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;adult_male&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;False&quot;</span><span class="p">,</span> <span class="s">&quot;True&quot;</span><span class="p">),</span> 
+       <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;dodgerblue4&quot;</span><span class="p">,</span> <span class="s">&quot;chocolate&quot;</span><span class="p">),</span>  <span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/qualitative-daten_31_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
+            </div>
+            <div class="c-textbook__footer" id="textbook_footer">
+              
+<nav class="c-page__nav">
+  
+    
+    
+
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/jupyter-book-test/data-visualization/quantitative-daten.html">
+      〈 <span class="u-margin-right-tiny"></span> Quantitative Daten
+    </a>
+  
+
+  
+    
+
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/jupyter-book-test/data-visualization/anpassung-von-plots.html">
+      Anpassung von Plots <span class="u-margin-right-tiny"></span> 〉
+    </a>
+  
+</nav>
+
+              <footer>
+  <p class="footer">This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a></p>
+</footer>
+
+            </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

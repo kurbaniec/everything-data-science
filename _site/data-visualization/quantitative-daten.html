@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>Quantitative Daten</title>
+  <meta name="description" content="        Quantitative Daten    Quantitative Daten Quantitative Daten sind Messwerte die in numerischer Form dargestellt werden.Zur Visualisierung von quantita...">
+
+  <link rel="canonical" href="http://localhost:4000/jupyter-book-test/data-visualization/quantitative-daten.html">
+  <link rel="alternate" type="application/rss+xml" title="Everything Data Science" href="http://localhost:4000/jupyter-book-test/feed.xml">
+
+  <meta property="og:url"         content="http://localhost:4000/jupyter-book-test/data-visualization/quantitative-daten.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Quantitative Daten" />
+<meta property="og:description" content="        Quantitative Daten    Quantitative Daten Quantitative Daten sind Messwerte die in numerischer Form dargestellt werden.Zur Visualisierung von quantita..." />
+<meta property="og:image"       content="http://localhost:4000/jupyter-book-test/images/logo/logo.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": "http://localhost:4000/jupyter-book-test/data-visualization/quantitative-daten.html",
+  "headline": "Quantitative Daten",
+  "datePublished": "2020-01-19T21:19:02+01:00",
+  "dateModified": "2020-01-19T21:19:02+01:00",
+  "description": "        Quantitative Daten    Quantitative Daten Quantitative Daten sind Messwerte die in numerischer Form dargestellt werden.Zur Visualisierung von quantita...",
+  "author": {
+    "@type": "Person",
+    "name": "Kacper Urbaniec"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Data 100 at UC Berkeley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:4000/jupyter-book-test",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http://localhost:4000/jupyter-book-test",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/jupyter-book-test/assets/css/styles.css">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/jupyter-book-test/images/logo/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
+    },
+    
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
+
+
+  <!-- DOM updating function -->
+  <script src="/jupyter-book-test/assets/js/page/dom-update.js"></script>
+
+  <!-- Selectors for elements on the page -->
+  <script src="/jupyter-book-test/assets/js/page/documentSelectors.js"></script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '/jupyter-book-test';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
+  <script src="/jupyter-book-test/assets/js/page/anchors.js" async></script>
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Load nbinteract for widgets -->
+  
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+
+  <!-- Load the auto-generating TOC (non-async otherwise the TOC won't load w/ turbolinks) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.8.1/tocbot.min.js" async></script>
+  <script src="/jupyter-book-test/assets/js/page/tocbot.js"></script>
+
+  <!-- Google analytics -->
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
+
+  <!-- Load custom website scripts -->
+  <script src="/jupyter-book-test/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/jupyter-book-test/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/jupyter-book-test/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+
+  <!-- Load JS that depends on site variables -->
+  <script src="/jupyter-book-test/assets/js/page/copy-button.js" async></script>
+
+  <!-- Hide cell code -->
+  <script src="/jupyter-book-test/assets/js/page/hide-cell.js" async></script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/jupyter-book-test/assets/css/styles.css",
+        style: "#textbook_content {padding-top: 40px};",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList,
+        documentTitle: "Made with Jupyter Book"
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
+</head>
+
+  <body>
+    <!-- Include the ThebeLab config so it gets reloaded on each page -->
+    <script type="text/x-thebe-config">{
+    requestKernel: true,
+    binderOptions: {
+    repo: "YOUR-ORG/YOUR-REPO",
+    ref: "gh-pages",
+    },
+    codeMirrorConfig: {
+    theme: "abcdef",
+    mode: "python"
+    },
+    kernelOptions: {
+    kernelName: "python3",
+    path: "content/data-visualization"
+    }
+}
+</script>
+
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  <a href="https://jupyterbook.org/"><img src="/jupyter-book-test/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">Everything Data Science</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/intro">
+        <a class="c-sidebar__entry"
+          href="/jupyter-book-test/intro.html"
+        >
+          
+          Home
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="https://github.com/kurbaniec-tgm/jupyter-book-test">
+        <a class="c-sidebar__entry"
+          href="https://github.com/kurbaniec-tgm/jupyter-book-test"
+        >
+          
+          GitHub repository
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/data-visualization/intro">
+        <a class="c-sidebar__entry"
+          href="/jupyter-book-test/data-visualization/intro.html"
+        >
+          
+          Data Visualization
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+        
+
+        
+
+        <ul class="c-sidebar__sections">
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-visualization/quantitative-daten">
+              <a class="c-sidebar__entry"
+                href="/jupyter-book-test/data-visualization/quantitative-daten.html"
+              >
+                
+                Quantitative Daten
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-visualization/qualitative-daten">
+              <a class="c-sidebar__entry"
+                href="/jupyter-book-test/data-visualization/qualitative-daten.html"
+              >
+                
+                Qualitative Daten
+              </a>
+            </li>
+            
+            
+          
+            
+            
+
+            
+            
+            
+            
+
+            <li class="c-sidebar__section" data-url="/data-visualization/anpassung-von-plots">
+              <a class="c-sidebar__entry"
+                href="/jupyter-book-test/data-visualization/anpassung-von-plots.html"
+              >
+                
+                Anpassung von Plots
+              </a>
+            </li>
+            
+            
+          
+        </ul>
+      
+
+      
+    
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter" data-url="/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung">
+        <a class="c-sidebar__entry"
+          href="/jupyter-book-test/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung.html"
+        >
+          
+          Werkzeuge zur Visualisierung
+        </a>
+      </li>
+
+      
+      
+
+      
+
+      
+      
+
+      
+
+      
+    
+  </ul>
+  <p class="sidebar_footer"></p>
+</nav>
+
+      
+      <div class="c-topbar" id="top-navbar">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+<div class="download-buttons-dropdown">
+    <button id="dropdown-button-trigger" class="interact-button"><img src="/jupyter-book-test/assets/images/download-solid.svg" alt="Download" /></button>
+    <div class="download-buttons">
+        <a href="/jupyter-book-test/content/data-visualization/quantitative-daten.ipynb" download>
+        <button id="interact-button-download" class="interact-button">.ipynb</button>
+        </a>
+        
+        <a id="interact-button-print"><button id="interact-button-download" class="interact-button">.pdf</button></a>
+    </div>
+</div>
+
+
+  
+  
+  
+  
+
+
+</div>
+
+  </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><img src="/jupyter-book-test/assets/images/list-solid.svg" alt="Search" />   On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/jupyter-book-test/search.html" class="topbar-right-button" id="search-button">
+    <img src="/jupyter-book-test/assets/images/search-solid.svg" alt="Search" />
+  </a>
+</div>
+
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
+                  <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Quantitative Daten</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quantitative-Daten">Quantitative Daten<a class="anchor-link" href="#Quantitative-Daten"> </a></h1><p>Quantitative Daten sind Messwerte die in numerischer Form dargestellt werden.</p>
+<p>Zur Visualisierung von quantitativen Daten werden meist Histogramme, Boxplots und Streudiagramme verwendet.</p>
+<p>Zur Darstellung in Python kann die <code>seaborn</code> Plotting Library verwendet werden. Die nächsten Beispiele werden mit dieser Library und dem Datensatz Titanic (<code>titanic.csv</code>) realisiert.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HIDDEN</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="c1"># Ignore numpy dtype warnings. These warnings are caused by an interaction</span>
+<span class="c1"># between numpy and Cython and can be safely ignored.</span>
+<span class="c1"># Reference: https://stackoverflow.com/a/40846742</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;numpy.dtype size changed&quot;</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;numpy.ufunc size changed&quot;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">nbinteract</span> <span class="k">as</span> <span class="nn">nbi</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s1">&#39;talk&#39;</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">threshold</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;precision&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># This option stops scientific notation for pandas</span>
+<span class="c1"># pd.set_option(&#39;display.float_format&#39;, &#39;{:.2f}&#39;.format)</span>
+
+<span class="k">def</span> <span class="nf">df_interact</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Outputs sliders that show rows and columns of df</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">row</span><span class="p">:</span><span class="n">row</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">col</span><span class="p">:</span><span class="n">col</span> <span class="o">+</span> <span class="mi">8</span><span class="p">]</span>
+    <span class="n">interact</span><span class="p">(</span><span class="n">peek</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="mi">5</span><span class="p">),</span> <span class="n">col</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">-</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(</span><span class="si">{}</span><span class="s1"> rows, </span><span class="si">{}</span><span class="s1"> columns) total&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+    
+<span class="c1"># Import seaborn and apply its plotting styles</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load the dataset in Python and drop N/A values to make plot function calls simpler</span>
+<span class="c1"># Use seaborn github dataset: ti = sns.load_dataset(&#39;titanic&#39;).dropna().reset_index(drop=True)</span>
+<span class="c1"># Load dataset locally</span>
+<span class="n">ti</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/titanic-seaborn.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># This table is too large to fit onto a page so we&#39;ll output sliders to</span>
+<span class="c1"># pan through different sections.</span>
+<span class="c1"># df_interact(ti)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HIDDEN</span>
+<span class="c1"># Enable R in Python notebook</span>
+<span class="o">%</span><span class="k">load_ext</span> rpy2.ipython
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Init libraries</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;lmtest&quot;</span><span class="p">,</span> <span class="n">repos</span><span class="o">=</span><span class="s">&quot;https://cran.wu.ac.at/&quot;</span><span class="p">)</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;vcd&quot;</span><span class="p">,</span> <span class="n">repos</span><span class="o">=</span><span class="s">&quot;https://cran.wu.ac.at/&quot;</span><span class="p">)</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">,</span> <span class="n">repos</span><span class="o">=</span><span class="s">&quot;https://cran.wu.ac.at/&quot;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">vcd</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Load the dataset in R and drop N/A values to make plot function calls simpler</span>
+<span class="n">ti</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;../data/titanic-seaborn.csv&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;,&quot;</span><span class="p">)</span>
+<span class="c1"># Delete rows with empty values</span>
+<span class="c1"># Source: https://stackoverflow.com/questions/9126840/delete-rows-with-blank-values-in-one-particular-column</span>
+<span class="n">ti</span> <span class="o">&lt;-</span> <span class="n">ti[</span><span class="o">!</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="p">)</span> <span class="o">|</span> <span class="nf">is.na</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">pclass</span><span class="p">)</span> <span class="o">|</span> <span class="n">ti</span><span class="o">$</span><span class="n">deck</span><span class="o">==</span><span class="s">&quot;&quot;</span> <span class="o">|</span>
+           <span class="n">ti</span><span class="o">$</span><span class="n">sex</span><span class="o">==</span><span class="s">&quot;&quot;</span> <span class="o">|</span> <span class="nf">is.na</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">)</span> <span class="o">|</span> <span class="nf">is.na</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">sibsp</span><span class="p">)</span> <span class="o">|</span> <span class="nf">is.na</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">parch</span><span class="p">)</span> <span class="o">|</span>
+           <span class="nf">is.na</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">fare</span><span class="p">)</span> <span class="o">|</span> <span class="n">ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;&quot;</span> <span class="o">|</span> <span class="n">ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;&quot;</span> <span class="o">|</span> <span class="n">ti</span><span class="o">$</span><span class="n">embarked</span><span class="o">==</span><span class="s">&quot;&quot;</span> <span class="o">|</span>
+           <span class="n">ti</span><span class="o">$</span><span class="n">adult_male</span><span class="o">==</span><span class="s">&quot;&quot;</span> <span class="o">|</span>  <span class="n">ti</span><span class="o">$</span><span class="n">embark_town</span><span class="o">==</span><span class="s">&quot;&quot;</span><span class="p">),</span> <span class="n">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Histogramme">Histogramme<a class="anchor-link" href="#Histogramme"> </a></h2><p>Histogramme eignen sich gut um Verläufe von Häufigkeitsverteilungen zu visualisieren. Der Datensatz der Titanic enthält für jeden Passagier eine Zeile mit Informationen, darunter auch das Alter. Somit kann man eine Verteilung des Alters der Passagiere erstellen.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Adding a semi-colon at the end tells Jupyter not to output the</span>
+<span class="c1"># usual &lt;matplotlib.axes._subplots.AxesSubplot&gt; line</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">ti</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_7_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Following function is needed to force break intervals in histogramms in R</span>
+<span class="c1"># Source: https://stackoverflow.com/questions/49438936/understanding-hist-and-break-intervals-in-r</span>
+<span class="n">breakInterval</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">interval</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">seq</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="nf">max</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">length.out</span> <span class="o">=</span> <span class="n">interval</span><span class="m">+1</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="nf">hist</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="nf">breakInterval</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="m">10</span><span class="p">),</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Histogram Titanic Age&quot;</span><span class="p">)</span>
+<span class="c1"># Draw KDE (gaussian kernel densitiy estimate) over histogram</span>
+<span class="c1"># Source: https://stackoverflow.com/questions/20952730/how-to-draw-kde-over-histogram-plot</span>
+<span class="n">dens</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">dens</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_9_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die Python Funktion <code>distplot</code> fügt automatisch eine geglättete Kurve, die KDE (Kernel Density Estimation) bzw. in Deutsch die Kerndichteschätzung, welche eine Wahrscheinlichkeitsdichtefunktion darstellt die zur Erstellung der Wahrscheinlichkeitsverteilung dient.</p>
+<p>In R wird diese Kurve nicht automatisch erstellt, man kann aber nach dem Plotten des Histogramms mit der Funktion <code>density</code> ein KDE erzugen und mithilfe von <code>lines</code> dem vorher erzeugten Grafik-Object die Kurve hinzufügen. Das Aufrufen von Funktionen nach dem Plotten zur weiteren Bearbeitung der Ausgabe ist ein oft verwendetes Konzept in R.</p>
+<p>Weiters kann ein sogennanter "Rug" erstellt werden, damit sind Markierungen aller individuellen Werte auf der x-Achse gemeint. In Python ist es eine Parameterzugabe, in R wieder ein Funktionsaufruf.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">ti</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">rug</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_11_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="nf">hist</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="nf">breakInterval</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="m">10</span><span class="p">),</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Histogram Titanic Age&quot;</span><span class="p">)</span>
+<span class="c1"># Draw KDE (gaussian kernel densitiy estimate) over histogram</span>
+<span class="c1"># Source: https://stackoverflow.com/questions/20952730/how-to-draw-kde-over-histogram-plot</span>
+<span class="n">dens</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">dens</span><span class="p">)</span>
+<span class="nf">rug</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_12_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Weiters kann die Anzahl der "Rechtecke" des Histogramms verändert werden. Eine Erhöhung dieser führt zu einer feinerern Erkennung der Altersgruppen.</p>
+<p>Für R habe eine Funktion <code>breakInterval</code> geschrieben, der den Plot die Anzahl der "Rechtecke" vorschreibt. Nur die gewünschte Anzahl anzugeben führt oft nicht zum gewünschten Ergebniss, da R nicht garantiert, diese einzuhalten.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">ti</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_14_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="nf">hist</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="nf">breakInterval</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="m">30</span><span class="p">),</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Histogram Titanic Age&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_15_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Box-Plots">Box-Plots<a class="anchor-link" href="#Box-Plots"> </a></h2><p>Box-Plots weeden hautpsächlich verwendet, um sich einen Überblick von darliegenden Daten zu verschaffen.</p>
+<p>Ein Box-Plot besteht aus einer Box und einer Antenne bzw. Whisker je links und rechts. Der Anfang der Box stellt das untere Quartil dar, das Ende das obere Quartil. Der Strich in der Mitte bildet den Median ab.</p>
+<p>Je nach Implementierungen füllen die Whishers die komplette Spannweite (gesamter Wertebereich) oder haben eine Längenbegrenzung z.B. das 1,5-Fache des Inerquartilsabstands (Länge der Box). Dann werden alle Werte ausserhalb der Whiskers als Ausreißer interpretiert.</p>
+<p>Die Darstellung der Fahrpreis des Titanic Datensatz mittels Python und R geschieht sehr ähnlich. Bei R muss man einzig angeben, das man den Plot horizontal anlegen möchte.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;fare&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_17_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="nf">boxplot</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">fare</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_18_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Diese Darstellungen geben einen Überblick über die Fahrpreise, doch es ist meist sinnvoller bei Box-Plots die Daten in Kategorien einzuteilen und diese zu vergleichen.</p>
+<p>Die Boxplot Funktion in Python ist intelligent genug, die Kategorien selbst herauszusuchen. In R muss man die Kategorien getrennt angebeben, doch in Gegensatz zu anderen R Funktionen kann man mehrere Daten auf einmal in eine Funktion übergeben, anstatt drei Boxplots zu bilden.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;fare&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;who&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_20_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Source: https://www.datamentor.io/r-programming/box-plot/</span>
+<span class="c1"># Colors: http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf</span>
+<span class="nf">boxplot</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;child&quot;</span><span class="n">]</span><span class="p">,</span>  <span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;man&quot;</span><span class="n">]</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span><span class="n">]</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>
+    <span class="n">xlab</span> <span class="o">=</span> <span class="s">&quot;fare&quot;</span><span class="p">,</span> <span class="n">ylab</span> <span class="o">=</span> <span class="s">&quot;who&quot;</span><span class="p">,</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;child&quot;</span><span class="p">,</span> <span class="s">&quot;man&quot;</span><span class="p">,</span> <span class="s">&quot;woman&quot;</span><span class="p">),</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;forestgreen&quot;</span><span class="p">,</span> <span class="s">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s">&quot;dodgerblue4&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_21_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die invidiuelle Anzeiger aller Kategorien auf einem Plot hilft bei der Übersichtlichkeit und Interpretation der Daten. Bei Histogrammen führt es eher zum Gegenteil, einem viel zu überladenen und nicht durchschaubaren Plot.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">ti</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ti</span><span class="p">[</span><span class="s1">&#39;who&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;woman&#39;</span><span class="p">,</span> <span class="s1">&#39;fare&#39;</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">ti</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ti</span><span class="p">[</span><span class="s1">&#39;who&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;man&#39;</span><span class="p">,</span> <span class="s1">&#39;fare&#39;</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">ti</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ti</span><span class="p">[</span><span class="s1">&#39;who&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;child&#39;</span><span class="p">,</span> <span class="s1">&#39;fare&#39;</span><span class="p">]);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_23_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Multiple figures in one plot: https://stackoverflow.com/a/9976492</span>
+<span class="c1"># Transparent color: https://stackoverflow.com/a/30940291</span>
+<span class="nf">hist</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;man&quot;</span><span class="n">]</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="nf">breakInterval</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;man&quot;</span><span class="n">]</span><span class="p">,</span> <span class="m">30</span><span class="p">),</span>
+    <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;fare&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Histogram Titanic Who&quot;</span><span class="p">,</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="nf">adjustcolor</span><span class="p">(</span> <span class="s">&quot;chocolate&quot;</span><span class="p">,</span> <span class="n">alpha.f</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">)),</span>
+    <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">-100</span><span class="p">,</span><span class="m">600</span><span class="p">),</span>
+    <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.016</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">dens</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;man&quot;</span><span class="n">]</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">dens</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">))</span>
+
+<span class="nf">hist</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;child&quot;</span><span class="n">]</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Histogram Titanic Who&quot;</span><span class="p">,</span>
+     <span class="n">col</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="nf">adjustcolor</span><span class="p">(</span> <span class="s">&quot;forestgreen&quot;</span><span class="p">,</span> <span class="n">alpha.f</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">)),</span> <span class="n">add</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">dens</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;child&quot;</span><span class="n">]</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">dens</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;forestgreen&quot;</span><span class="p">))</span>
+
+<span class="nf">hist</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span><span class="n">]</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Histogram Titanic Who&quot;</span><span class="p">,</span>
+     <span class="n">col</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="nf">adjustcolor</span><span class="p">(</span> <span class="s">&quot;dodgerblue4&quot;</span><span class="p">,</span> <span class="n">alpha.f</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">)),</span> <span class="n">add</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">dens</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span><span class="n">]</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">dens</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;dodgerblue4&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_24_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Streudiagramme-(Scatter-Plots)">Streudiagramme (Scatter Plots)<a class="anchor-link" href="#Streudiagramme-(Scatter-Plots)"> </a></h2><p>Streudiagramme stellen Wertepaare in Form von Punkten auf einem kartesischen Koordinatensystem ab.</p>
+<p>Man erhofft sich durch die Darstellung die Abhängigkeiten zwischen den Merkmalen leicht zu erkennen.</p>
+<p>Bei der Python Funktion wird automatisch eine lineare Regressionsgerade (Zusammenhang zwischen den Merkmalen) und ein Konfidenzinterval von 95% (95% der Schätzungen schließen den erwarteten Wert im Interval ein) um die Regressionsgerade erstellt.</p>
+<p>Achtung: Korrelation (Zusammenhang) bedeutet nicht Kausalität (tatsächliche Auswirkung einer Variable auf die andere).</p>
+<p>In R wird standardmäßig nur das alleinige Streudiagramm ausgeben, Regressionsgerade und Konfigdenzinterval müssen manuell hinzugefügt werden.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;fare&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_26_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Source: https://stackoverflow.com/a/46459957</span>
+<span class="c1"># Note temporary variables are important because of &quot;newdata=data.frame(x=newx)&quot;. </span>
+<span class="c1"># Using ti$Age there will result in errors.</span>
+<span class="n">x</span><span class="o">&lt;-</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span>
+<span class="n">y</span><span class="o">&lt;-</span><span class="n">ti</span><span class="o">$</span><span class="n">fare</span>
+<span class="c1"># Linear regression</span>
+<span class="n">lm.out</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">y</span> <span class="o">~</span> <span class="n">x</span><span class="p">)</span> 
+<span class="c1"># Confidence interval</span>
+<span class="n">newx</span> <span class="o">=</span> <span class="nf">seq</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="nf">max</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">by</span> <span class="o">=</span> <span class="m">0.05</span><span class="p">)</span>
+<span class="n">conf_interval</span> <span class="o">&lt;-</span> <span class="nf">predict</span><span class="p">(</span><span class="n">lm.out</span><span class="p">,</span> <span class="n">newdata</span><span class="o">=</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">newx</span><span class="p">),</span> <span class="n">interval</span><span class="o">=</span><span class="s">&quot;confidence&quot;</span><span class="p">,</span> <span class="n">level</span> <span class="o">=</span> <span class="m">0.95</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;fare&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Titanic Scatter Plot&quot;</span><span class="p">)</span>
+<span class="nf">abline</span><span class="p">(</span><span class="n">lm.out</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
+<span class="nf">matlines</span><span class="p">(</span><span class="n">newx</span><span class="p">,</span> <span class="n">conf_interval[</span><span class="p">,</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="n">]</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="s">&quot;dodgerblue2&quot;</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_27_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Da Umsetzung der Regressionsgerade und Konfidenzintervalle in R mit den Standardfunktionen eher mühselig ist, kann man die library <code>ggplot</code> verwenden, die ähnlich wie <code>seaborn</code> in Python das Unterfangen vereinfacht.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Sources:</span>
+<span class="c1"># https://stackoverflow.com/questions/15633714/adding-a-regression-line-on-a-ggplot</span>
+<span class="c1"># http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization</span>
+<span class="c1"># http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization</span>
+<span class="c1"># plot + regression line with confidence interval + scatter points</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">ti</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">age</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">fare</span><span class="p">))</span> <span class="o">+</span> <span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;lm&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_29_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In Falle des Titanic Datensatzes sieht man keine wirkliche Korrelation zwischen den Merkmalen, somit kann man die Regressiongerade beim Plotten ignorieren.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;fare&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">,</span> <span class="n">fit_reg</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_31_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">fare</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;fare&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Titanic Scatter Plot&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_32_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Weiters können wir die Übersicht des Streudiagramms erhöhen, indem man wie beim Box-Plot die Kategorien angibt.</p>
+<p>In Python gibt man den Namen der Spalte zu Kategoriesierung als Parameter <code>hue</code> an.</p>
+<p>In R muss man wie beim Histogramm drei Funktionsaufrufe machen, wobei <code>plot</code> den "Hauptplot" erstellt und die <code>points</code> Funktionen die restlichen Punkte der zwei übrig gebliebenen Kategorien zum Plot hinzufügen.</p>
+<p>Außerdem muss man einen Wertebereich beim Plot mittels <code>xlim=c(0, 80), ylim=c(0, 550)</code> angebgen, ansonsten sieht man einige Punkte aus dem neu hinzugefügten nicht mehr am Plot.</p>
+<p>Achtung: Dreimal <code>plot</code> aufzurufen führt zu drei Plots und keinen gemeinsamen, auch wenn <code>add=TRUE</code> angegeben wird.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;fare&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;who&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">ti</span><span class="p">,</span> <span class="n">fit_reg</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_34_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">R</span>
+<span class="c1"># Filled points: http://www.sthda.com/english/wiki/r-plot-pch-symbols-the-different-point-shapes-available-in-r</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span><span class="n">]</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span><span class="n">]</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;fare&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Titanic Scatter Plot&quot;</span><span class="p">,</span>
+    <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">80</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">550</span><span class="p">),</span> <span class="n">col</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;dodgerblue4&quot;</span><span class="p">),</span> <span class="n">pch</span><span class="o">=</span><span class="m">19</span>
+<span class="p">)</span>
+<span class="nf">points</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;child&quot;</span><span class="n">]</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;child&quot;</span><span class="n">]</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;fare&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Titanic Scatter Plot&quot;</span><span class="p">,</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;forestgreen&quot;</span><span class="p">),</span> <span class="n">pch</span><span class="o">=</span><span class="m">19</span>
+<span class="p">)</span>
+<span class="nf">points</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;man&quot;</span><span class="n">]</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">fare[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;man&quot;</span><span class="n">]</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;fare&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Titanic Scatter Plot&quot;</span><span class="p">,</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">),</span> <span class="n">pch</span><span class="o">=</span><span class="m">19</span>
+<span class="p">)</span>
+<span class="c1"># Add legend: http://www.sthda.com/english/wiki/add-legends-to-plots-in-r-software-the-easiest-way ,</span>
+<span class="c1"># https://stackoverflow.com/a/19054155</span>
+<span class="nf">legend</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&quot;topleft&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;woman&quot;</span><span class="p">,</span> <span class="s">&quot;child&quot;</span><span class="p">,</span> <span class="s">&quot;man&quot;</span><span class="p">),</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;dodgerblue4&quot;</span><span class="p">,</span> <span class="s">&quot;forestgreen&quot;</span><span class="p">,</span> <span class="s">&quot;chocolate&quot;</span><span class="p">),</span>  <span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/data-visualization/quantitative-daten_35_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Man erkennt keine grundlegenden Unterschiede zwischen männlichen und weiblichen Passagiren, jedoch erkennt man, dass die teuersten Tickets von Männern gekauft wurden.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
+            </div>
+            <div class="c-textbook__footer" id="textbook_footer">
+              
+<nav class="c-page__nav">
+  
+    
+    
+
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/jupyter-book-test/data-visualization/intro.html">
+      〈 <span class="u-margin-right-tiny"></span> Data Visualization
+    </a>
+  
+
+  
+    
+
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/jupyter-book-test/data-visualization/qualitative-daten.html">
+      Qualitative Daten <span class="u-margin-right-tiny"></span> 〉
+    </a>
+  
+</nav>
+
+              <footer>
+  <p class="footer">This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a></p>
+</footer>
+
+            </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
