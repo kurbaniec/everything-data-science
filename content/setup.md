@@ -15,7 +15,9 @@ pip install nbinteract
 pip install pandas
 pip install tzlocal
 jupyter labextension install @jupyter-widgets/jupyterlab-manager  
+jupyter labextension install @jupyterlab/celltags
 jupyter nbextension enable --py widgetsnbextension --sys-prefix 
+jupyter lab build
 ```
 
 Jupyter sollte jetzt mit folgenden Befehl startklar sein:
