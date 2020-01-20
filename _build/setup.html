@@ -7,7 +7,7 @@ prev_page:
 next_page:
   url: /data-visualization/intro.html
 suffix: .md
-search: install r jupyter pip zu rpy lab python und windows die anaconda kann folgenden werden mit cite esc enter block umwandeln von jupter um benutzen fr unter www com man befehlen installieren gemeinsam das linux unix benutzer knnen funktioniert aufsetzen einfach wird disitribution empfohlen diese link distribution heruntergeladen wenn erfolgreich installiert wurde programmiersprache alle bentigten dependencies jupyterwidgets conda c irkernel seaborn matplotlib ipywidgets nbinteract pandas tzlocal labextension widgets jupyterlab manager nbextension enable py widgetsnbextension sys prefix sollte jetzt befehl startklar sein ausfhren befehle einen notebook package verwendet paket mithilfe dies nicht dafr gibt es aber schon fertige binaries hier lfd
+search: jupyter install r pip zu lab rpy python und windows die anaconda kann folgenden werden mit cite esc enter block umwandeln von jupter um benutzen fr unter www com man befehlen installieren labextension jupyterlab gemeinsam das linux unix benutzer knnen funktioniert aufsetzen einfach wird disitribution empfohlen diese link distribution heruntergeladen wenn erfolgreich installiert wurde programmiersprache alle bentigten dependencies jupyterwidgets conda c irkernel seaborn matplotlib ipywidgets nbinteract pandas tzlocal widgets manager celltags nbextension enable py widgetsnbextension sys prefix build sollte jetzt befehl startklar sein ausfhren befehle einen notebook package verwendet paket mithilfe dies nicht dafr gibt es aber schon fertige binaries
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -31,7 +31,9 @@ pip install nbinteract
 pip install pandas
 pip install tzlocal
 jupyter labextension install @jupyter-widgets/jupyterlab-manager  
-jupyter nbextension enable --py widgetsnbextension --sys-prefix</code></pre>
+jupyter labextension install @jupyterlab/celltags
+jupyter nbextension enable --py widgetsnbextension --sys-prefix 
+jupyter lab build</code></pre>
 <p>Jupyter sollte jetzt mit folgenden Befehl startklar sein:</p>
 
 <pre><code>jupyter-lab</code></pre>

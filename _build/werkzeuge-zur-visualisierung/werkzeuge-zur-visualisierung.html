@@ -11,7 +11,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: der die und man berlebensrate auf crew daten anhand den r frauen dass sich oder ob bei dritten klasse mnner aus datensatz hilfe hilfreiche befehle von variablen geeigneter begrnde kinder fr dies paradoxon es als darstellungen graphischen lade titanic beschreibe internen mithilfe rnder je stelle weise graphisch dar zuerst bercksichtigt wurden ist jedoch sind nicht betrachtet eine schlechtere werte simpson handelt ersten population income illiteracy life exp ectancy murder vorliegen ausreier www quotedb com quotes help untersuche tabellen absoluten relativen hufigkeiten heruntergebrochen dimensionen table ftable colsums rowsums apply xtable barplot mosaicplot assocplot quantitativen ergebnisse seenotrettung haben hchste somit vermutung diese
+search: die der und datensatz crew nicht berlebensrate man den dass daten ist auf r anhand von bei sind mit oder klasse werte frauen sich aus dem auch hilfe mithilfe eine variablen ob fr dritten es mnner titanic wurden cite hilfreiche befehle angezeigt werden aber kann nach geeigneter begrnde kinder dies paradoxon als bevlkerung population darstellungen graphischen des da lade beschreibe internen help knnen einem dokumentation interne rnder je anzahl berlebenden toten passagier wirklich weil sie definiert stelle weise graphisch dar zuerst bercksichtigt diese jedoch betrachtet besitzt schlechtere ein simpson state x nachfolgend handelt um mir im alabama ich ersten income
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -29,7 +29,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 </div>
 </div>
 
-<div class="jb_cell">
+<div class="jb_cell tag_hide_output tag_hide_input">
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -57,21 +57,6 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>package &#39;lmtest&#39; successfully unpacked and MD5 sums checked
-
-The downloaded binary packages are in
-	C:\Users\aon91\AppData\Local\Temp\RtmpWiXanr\downloaded_packages
-package &#39;vcd&#39; successfully unpacked and MD5 sums checked
-
-The downloaded binary packages are in
-	C:\Users\aon91\AppData\Local\Temp\RtmpWiXanr\downloaded_packages
-package &#39;ggplot2&#39; successfully unpacked and MD5 sums checked
-
-The downloaded binary packages are in
-	C:\Users\aon91\AppData\Local\Temp\RtmpWiXanr\downloaded_packages
-package &#39;stablelearner&#39; successfully unpacked and MD5 sums checked
-
-The downloaded binary packages are in
-	C:\Users\aon91\AppData\Local\Temp\RtmpWiXanr\downloaded_packages
 </pre>
 </div>
 </div>
@@ -81,9 +66,42 @@ The downloaded binary packages are in
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>Warning message:
-&#34;package &#39;vcd&#39; was built under R version 3.6.2&#34;Loading required package: grid
-Warning message:
-&#34;package &#39;ggplot2&#39; was built under R version 3.6.2&#34;</pre>
+&#34;cannot remove prior installation of package &#39;lmtest&#39;&#34;Warning message in file.copy(savedcopy, lib, recursive = TRUE):
+&#34;Problem C:\ProgramData\Anaconda3\Lib\R\library\00LOCK\lmtest\libs\x64\lmtest.dll nach C:\ProgramData\Anaconda3\Lib\R\library\lmtest\libs\x64\lmtest.dll zu kopieren: Permission denied&#34;Warning message:
+&#34;restored &#39;lmtest&#39;&#34;</pre>
+</div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+The downloaded binary packages are in
+	C:\Users\aon91\AppData\Local\Temp\Rtmp0a266V\downloaded_packages
+</pre>
+</div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Warning message:
+&#34;package &#39;vcd&#39; is in use and will not be installed&#34;Warning message:
+&#34;package &#39;ggplot2&#39; is in use and will not be installed&#34;</pre>
+</div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>package &#39;stablelearner&#39; successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\aon91\AppData\Local\Temp\Rtmp0a266V\downloaded_packages
+</pre>
 </div>
 </div>
 </div>
@@ -95,36 +113,35 @@ Warning message:
 
 <div class="jb_cell">
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Alle Aufgaben in Bezug mit Titanic wurden mit dem Datensatz des Packages <code>stablelearner</code> realisiert, da dieser auch nebem den Passagieren, auch die Crew-Mitglieder inkludiert. {% cite titanic_full_data %}</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Load dataset</span>
-<span class="c1">#ti &lt;- read.csv(&quot;../datasets/titanic.csv&quot;, header = TRUE, sep=&quot;,&quot;)</span>
-<span class="c1">#ti$Who &lt;- &quot;NA&quot;</span>
-<span class="c1">#ti$Who[ti$Sex==&quot;male&quot;] &lt;- &quot;man&quot;</span>
-<span class="c1">#ti$Who[ti$Sex==&quot;female&quot;] &lt;- &quot;woman&quot;</span>
-<span class="c1">#ti$Who[ti$Age&lt;18] &lt;- &quot;child&quot;</span>
-<span class="c1"># Titanic filtered</span>
-<span class="c1">#ti &lt;- ti[!(is.na(ti$Cabin) | ti$Cabin==&quot;&quot; | ti$Embarked==&quot;&quot; | is.na(ti$PassengerId) | is.na(ti$Survived) |</span>
-<span class="c1">#           is.na(ti$Pclass) |  ti$Ticket==&quot;Name&quot; |is.na(ti$Age) | ti$Ticket==&quot;&quot; | ti$Sex==&quot;&quot; ), ]</span>
 <span class="c1"># Full titanic dataset: https://rdrr.io/cran/stablelearner/man/titanic.html</span>
 <span class="c1"># Includes crew, which is needed or the simpson paradoxon</span>
 <span class="nf">data</span><span class="p">(</span><span class="s">&quot;titanic&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s">&quot;stablelearner&quot;</span><span class="p">)</span>
 <span class="n">ti</span> <span class="o">&lt;-</span> <span class="n">titanic</span>
-
-<span class="n">ti</span><span class="o">$</span><span class="n">who</span> <span class="o">&lt;-</span> <span class="s">&quot;NA&quot;</span>
 <span class="n">ti</span><span class="o">$</span><span class="n">sex</span><span class="o">=</span><span class="n">ti</span><span class="o">$</span><span class="n">gender</span>
+<span class="c1"># Add who colum</span>
+<span class="n">ti</span><span class="o">$</span><span class="n">who</span> <span class="o">&lt;-</span> <span class="s">&quot;NA&quot;</span>
 <span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">sex</span><span class="o">==</span><span class="s">&quot;male&quot;</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&quot;man&quot;</span>
 <span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">sex</span><span class="o">==</span><span class="s">&quot;female&quot;</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&quot;woman&quot;</span>
 <span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">age</span><span class="o">&lt;</span><span class="m">18</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&quot;child&quot;</span>
-<span class="c1">#ti &lt;- ti[!( ti$name==&quot;&quot; | ti$gender==&quot;&quot; | is.na(ti$age) | ti$class==&quot;&quot; | ti$embarked==&quot;&quot; |</span>
-<span class="c1">#           ti$survived==&quot;&quot; | ti$country==&quot;&quot; | is.na(ti$ticketno) | is.na(ti$fare) | </span>
-<span class="c1">#           is.na(ti$sibsp) | is.na(ti$parch)), ]</span>
+<span class="c1"># Filter dataset</span>
 <span class="n">ti</span> <span class="o">&lt;-</span> <span class="n">ti[</span><span class="o">!</span><span class="p">(</span> <span class="n">ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;&quot;</span> <span class="o">|</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;&quot;</span><span class="p">),</span><span class="n">]</span>
-<span class="c1">#ti &lt;- ti[!(is.na(ti$Cabin) | ti$Cabin==&quot;&quot; | ti$Embarked==&quot;&quot; | is.na(ti$PassengerId) | is.na(ti$survived) |</span>
-<span class="c1">#           is.na(ti$Pclass) |  ti$Ticket==&quot;Name&quot; |is.na(ti$age) | ti$ticketno==&quot;&quot; | ti$gender==&quot;&quot; ), ]</span>
 </pre></div>
 
     </div>
@@ -146,13 +163,69 @@ Warning message:
 
 <div class="jb_cell">
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mithilfe von <code>?</code> oder <code>help()</code> können Informationen zu einem Datensatz angezeigt werden. Dazu muss aber der Autor/Entwickler eine Dokumentation anfertigen, was bei meinem benutzen Datensatz nicht der Fall ist.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">help</span><span class="p">(</span><span class="n">ti</span><span class="p">)</span>
-<span class="nf">str</span><span class="p">(</span><span class="n">ti</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="o">?</span><span class="n">ti</span>
+<span class="nf">help</span><span class="p">(</span><span class="n">ti</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+No documentation for 'ti' in specified packages and libraries:
+you could try '??ti'
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mithilfe der <code>str</code> (structure) Funktion kann aber von jedem R Objekt die interne Datenstruktur kompakt angezeigt werden.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">ti</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -178,21 +251,10 @@ Warning message:
  $ sibsp   : Ord.factor w/ 9 levels &#34;0&#34;&lt;&#34;1&#34;&lt;&#34;2&#34;&lt;&#34;3&#34;&lt;..: 1 1 2 2 1 1 2 2 1 1 ...
  $ parch   : Ord.factor w/ 10 levels &#34;0&#34;&lt;&#34;1&#34;&lt;&#34;2&#34;&lt;&#34;3&#34;&lt;..: 1 3 2 2 1 1 1 1 1 1 ...
  $ survived: Factor w/ 2 levels &#34;no&#34;,&#34;yes&#34;: 1 1 1 2 2 2 1 2 2 2 ...
- $ who     : chr  &#34;man&#34; &#34;child&#34; &#34;child&#34; &#34;woman&#34; ...
  $ sex     : Factor w/ 2 levels &#34;female&#34;,&#34;male&#34;: 2 2 2 1 1 2 2 1 2 2 ...
+ $ who     : chr  &#34;man&#34; &#34;child&#34; &#34;child&#34; &#34;woman&#34; ...
 </pre>
 </div>
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea ">
-No documentation for 'ti' in specified packages and libraries:
-you could try '??ti'
-</div>
-
 </div>
 </div>
 </div>
@@ -213,15 +275,273 @@ you could try '??ti'
 
 <div class="jb_cell">
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Anzahl der Überlebenden/Toten nach Alter:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">invisible</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">fare</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">age</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea ">
+<pre>              
+               no yes
+  0.1666666667  0   1
+  0.3333333333  1   0
+  0.4166666667  0   1
+  0.5833333333  1   1
+  0.75          0   2
+  0.8333333333  0   3
+  0.9166666667  0   1
+  1             3   7
+  2             8   5
+  3             2   6
+  4             3   9
+  5             4   4
+  6             2   2
+  7             5   3
+  8             5   5
+  9             5   4
+  10            7   0
+  11            4   2
+  12            1   2
+  13            3   4
+  14            5   3
+  15            5   4
+  16           11   9
+  17           38   9
+  18           39  22
+  19           51  14
+  20           57  16
+  21           55  25
+  22           66  33
+  23           59  24
+  24           54  33
+  25           52  26
+  26           52  17
+  27           50  25
+  28           60  22
+  29           49  30
+  30           62  28
+  31           48  23
+  32           45  28
+  33           40  20
+  34           33  12
+  35           35  16
+  36           46  21
+  37           44  10
+  38           31   9
+  39           37  21
+  40           35  18
+  41           29   8
+  42           28   6
+  43           20  10
+  44           18   5
+  45           25  16
+  46           22   8
+  47           10   8
+  48           16  12
+  49           11  10
+  50           13   5
+  51            4   3
+  52            7   8
+  53            4   3
+  54            7   4
+  55           12   3
+  56            2   3
+  57            5   0
+  58            4   4
+  59            9   4
+  60            4   3
+  61            5   3
+  62            4   2
+  63            6   1
+  64            4   2
+  65            3   0
+  66            2   0
+  67            1   0
+  69            1   0
+  70            1   0
+  71            2   0
+  72            1   0
+  74            1   0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Anzahl der Überlebenden/Toten nach Passagier-Klasse bzw. Crew-Einteilung:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea ">
+<pre>                  
+                    no yes
+  1st              123 201
+  2nd              166 118
+  3rd              528 181
+  deck crew         23  43
+  engineering crew 253  71
+  restaurant staff  66   3
+  victualling crew 337  94</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die Summe der Spalten/Zeilen ist bei diesem Datensatz nicht wirklich von großer Hilfe. Manche Werte sind falsch, weil sie nicht numerisch sind (Überlebensrate ist mit "yes"/"no" und nicht 1/0 definiert).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">colSums</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">ti</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">rowSums</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">ti</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<dl class=dl-horizontal>
+	<dt>name</dt>
+		<dd>0</dd>
+	<dt>gender</dt>
+		<dd>0</dd>
+	<dt>age</dt>
+		<dd>2</dd>
+	<dt>class</dt>
+		<dd>0</dd>
+	<dt>embarked</dt>
+		<dd>0</dd>
+	<dt>country</dt>
+		<dd>81</dd>
+	<dt>ticketno</dt>
+		<dd>891</dd>
+	<dt>fare</dt>
+		<dd>916</dd>
+	<dt>sibsp</dt>
+		<dd>900</dd>
+	<dt>parch</dt>
+		<dd>900</dd>
+	<dt>survived</dt>
+		<dd>0</dd>
+	<dt>sex</dt>
+		<dd>0</dd>
+	<dt>who</dt>
+		<dd>0</dd>
+</dl>
+
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<dl class=dl-horizontal>
+	<dt>1</dt>
+		<dd>0</dd>
+	<dt>2</dt>
+		<dd>0</dd>
+	<dt>3</dt>
+		<dd>0</dd>
+	<dt>4</dt>
+		<dd>0</dd>
+	<dt>5</dt>
+		<dd>0</dd>
+	<dt>6</dt>
+		<dd>0</dd>
+</dl>
+
+</div>
+
+</div>
+</div>
 </div>
 </div>
 
@@ -264,7 +584,7 @@ you could try '??ti'
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_8_0.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_17_0.png"
 >
 </div>
 
@@ -332,7 +652,7 @@ you could try '??ti'
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_9_0.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_18_0.png"
 >
 </div>
 
@@ -344,7 +664,7 @@ you could try '??ti'
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_9_1.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_18_1.png"
 >
 </div>
 
@@ -356,7 +676,7 @@ you could try '??ti'
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_9_2.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_18_2.png"
 >
 </div>
 
@@ -424,7 +744,7 @@ you could try '??ti'
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_11_0.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_20_0.png"
 >
 </div>
 
@@ -436,7 +756,7 @@ you could try '??ti'
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_11_1.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_20_1.png"
 >
 </div>
 
@@ -536,7 +856,7 @@ crew 0.2370787</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_15_1.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_24_1.png"
 >
 </div>
 
@@ -608,7 +928,7 @@ Crew        0.2202999</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_17_1.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_26_1.png"
 >
 </div>
 
@@ -669,7 +989,7 @@ Crew        0.8695652</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_18_1.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_27_1.png"
 >
 </div>
 
@@ -749,6 +1069,17 @@ Dieses Paradoxon, bei dem die Wahrscheinlichkeit verschieden ausfällt, je nachd
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="6.-Lade-den-Datensatz-'state.x77'-in-R.-Beschreibe-die-Daten-anhand-der-internen-Hilfe.">6. Lade den Datensatz 'state.x77' in R. Beschreibe die Daten anhand der internen Hilfe.<a class="anchor-link" href="#6.-Lade-den-Datensatz-'state.x77'-in-R.-Beschreibe-die-Daten-anhand-der-internen-Hilfe."> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Der interne Datensatz <code>state.x77</code> besitzt eine Dokumentation.</p>
+
 </div>
 </div>
 </div>
@@ -892,12 +1223,23 @@ Wadsworth &amp; Brooks/Cole.
 
 <div class="jb_cell">
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nachfolgend werden einige Werte aus dem Datensatz angezeigt.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Combine Data to one table</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Combine Data to one table, used later for operations</span>
 <span class="c1"># Source: https://stackoverflow.com/a/46416845</span>
 <span class="n">mystate</span> <span class="o">&lt;-</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="n">state.x77</span><span class="p">)</span>
 <span class="c1"># head(mystate)</span>
@@ -1047,9 +1389,55 @@ Wadsworth &amp; Brooks/Cole.
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Was kann man aus den Daten schließen? Es handelt sich um rationale und numerische Werte.</p>
+<p>Was mir aber aufgefallen ist, dass die Werte für die Bevölkerung nicht wirklich definiert sind. Es lebten sicher nicht 3615 Personen im Staat Alabama im Jahr 1977, auch kann ich mir nicht vorstellen, dass die Bevölkerung um diese Personenanzahl gestiegen ist. Beim Vergleich mit den Daten die Google mit der Suchanfrage <code>alabama population 1977</code> zurückgab, habe ich den Schluss gezogen, dass die Bevölkerungszahl durch 1000 die Bevölkerung in Millionen angibt.</p>
 
 </div>
 </div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">mystate</span><span class="o">$</span><span class="n">PopulationMil</span> <span class="o">&lt;-</span> <span class="n">mystate</span><span class="o">$</span><span class="n">Population</span> <span class="o">/</span> <span class="m">1000</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">mystate</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope=col>Population</th><th scope=col>Income</th><th scope=col>Illiteracy</th><th scope=col>Life Exp</th><th scope=col>Murder</th><th scope=col>HS Grad</th><th scope=col>Frost</th><th scope=col>Area</th><th scope=col>PopulationMil</th></tr></thead>
+<tbody>
+	<tr><th scope=row>Alabama</th><td> 3615 </td><td>3624  </td><td>2.1   </td><td>69.05 </td><td>15.1  </td><td>41.3  </td><td> 20   </td><td> 50708</td><td> 3.615</td></tr>
+	<tr><th scope=row>Alaska</th><td>  365 </td><td>6315  </td><td>1.5   </td><td>69.31 </td><td>11.3  </td><td>66.7  </td><td>152   </td><td>566432</td><td> 0.365</td></tr>
+	<tr><th scope=row>Arizona</th><td> 2212 </td><td>4530  </td><td>1.8   </td><td>70.55 </td><td> 7.8  </td><td>58.1  </td><td> 15   </td><td>113417</td><td> 2.212</td></tr>
+	<tr><th scope=row>Arkansas</th><td> 2110 </td><td>3378  </td><td>1.9   </td><td>70.66 </td><td>10.1  </td><td>39.9  </td><td> 65   </td><td> 51945</td><td> 2.110</td></tr>
+	<tr><th scope=row>California</th><td>21198 </td><td>5114  </td><td>1.1   </td><td>71.71 </td><td>10.3  </td><td>62.6  </td><td> 20   </td><td>156361</td><td>21.198</td></tr>
+	<tr><th scope=row>Colorado</th><td> 2541 </td><td>4884  </td><td>0.7   </td><td>72.06 </td><td> 6.8  </td><td>63.9  </td><td>166   </td><td>103766</td><td> 2.541</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1064,6 +1452,18 @@ Wadsworth &amp; Brooks/Cole.
 </div>
 
 <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nachfolgend sind die arithemtischen Mittel, Mediane und die Interquartilsabstände (IQR nach <em>inerquartile range</em>) der Variablen angeführt.</p>
+<p>Anmerkung: Ein Quartilsabstand gibt die Breite des Intervalls an, in dem die mittleren 50% der Stichprobeelemente liegen. {% cite wiki:iqr %}</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_hide_input">
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1135,27 +1535,6 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 <div class="jb_cell">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1">#state.x77[,&#39;Population&#39;]</span>
-<span class="c1">#state.x77[,&#39;Income&#39;]</span>
-<span class="c1">#state.x77[,&#39;Illiteracy&#39;]</span>
-<span class="c1">#state.x77[,&#39;Life Exp&#39;]</span>
-<span class="c1">#state.x77[,&#39;Murder&#39;]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell">
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="8.-Stelle-die-Daten-der-ersten-5-Variablen,-Population,-Income,-Illiteracy,-Life-Exp(ectancy)-und-Murder-in-geeigneter-Weise-graphisch-dar.-Verwende-daf&#252;r-wenigstens-2-unterschiedliche-graphische-Darstellungen.">8. Stelle die Daten der ersten 5 Variablen, Population, Income, Illiteracy, Life Exp(ectancy) und Murder in geeigneter Weise graphisch dar. Verwende daf&#252;r wenigstens 2 unterschiedliche graphische Darstellungen.<a class="anchor-link" href="#8.-Stelle-die-Daten-der-ersten-5-Variablen,-Population,-Income,-Illiteracy,-Life-Exp(ectancy)-und-Murder-in-geeigneter-Weise-graphisch-dar.-Verwende-daf&#252;r-wenigstens-2-unterschiedliche-graphische-Darstellungen."> </a></h3>
@@ -1168,7 +1547,7 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Histogramm, Boxpolot</p>
+<p>Siehe Punkte 9 &amp; 10.</p>
 
 </div>
 </div>
@@ -1187,12 +1566,186 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 <div class="jb_cell">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Histogrammm mit dieser Linie</p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">hist</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">PopulationMil</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="m">20</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Population in Millions&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Population&quot;</span><span class="p">)</span>
+<span class="n">dens</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">PopulationMil</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">dens</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_44_0.png"
+>
+</div>
 
 </div>
 </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">hist</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Income</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="m">150</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Income in Dollar&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Income&quot;</span><span class="p">)</span>
+<span class="n">dens</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Income</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">dens</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_45_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">hist</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Illiteracy</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Illiteracy in %&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Illiteracy&quot;</span><span class="p">)</span>
+<span class="n">dens</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Illiteracy</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">dens</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_46_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">hist</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="s">&quot;Life Exp&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="m">15</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Life Expectancy in years&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Life Expectancy&quot;</span><span class="p">)</span>
+<span class="n">dens</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="s">&quot;Life Exp&quot;</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">dens</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_47_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">hist</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Murder</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> <span class="n">breaks</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Murder rate per 100,000 population&quot;</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&quot;Murder&quot;</span><span class="p">)</span>
+<span class="n">dens</span> <span class="o">&lt;-</span> <span class="nf">density</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Murder</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="n">dens</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_48_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1224,8 +1777,8 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Population&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="n">quantiles</span> <span class="o">&lt;-</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Population&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span> <span class="m">0.75</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Population</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">quantiles</span> <span class="o">&lt;-</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Population</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span> <span class="m">0.75</span><span class="p">))</span>
 <span class="n">lower</span> <span class="o">&lt;-</span> <span class="n">quantiles[[1]]</span>
 <span class="n">upper</span> <span class="o">&lt;-</span> <span class="n">quantiles[[2]]</span>
 <span class="n">out</span> <span class="o">&lt;-</span> <span class="n">upper</span> <span class="o">+</span> <span class="p">(</span><span class="n">upper</span><span class="o">-</span><span class="n">lower</span><span class="p">)</span><span class="o">*</span><span class="m">1.5</span>
@@ -1248,13 +1801,13 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 <div class="output_html rendered_html output_subarea ">
 <table>
-<thead><tr><th></th><th scope=col>Population</th><th scope=col>Income</th><th scope=col>Illiteracy</th><th scope=col>Life Exp</th><th scope=col>Murder</th><th scope=col>HS Grad</th><th scope=col>Frost</th><th scope=col>Area</th></tr></thead>
+<thead><tr><th></th><th scope=col>Population</th><th scope=col>Income</th><th scope=col>Illiteracy</th><th scope=col>Life Exp</th><th scope=col>Murder</th><th scope=col>HS Grad</th><th scope=col>Frost</th><th scope=col>Area</th><th scope=col>PopulationMil</th></tr></thead>
 <tbody>
-	<tr><th scope=row>Illinois</th><td>11197 </td><td>5107  </td><td>0.9   </td><td>70.14 </td><td>10.3  </td><td>52.6  </td><td>127   </td><td> 55748</td></tr>
-	<tr><th scope=row>Pennsylvania</th><td>11860 </td><td>4449  </td><td>1.0   </td><td>70.43 </td><td> 6.1  </td><td>50.2  </td><td>126   </td><td> 44966</td></tr>
-	<tr><th scope=row>Texas</th><td>12237 </td><td>4188  </td><td>2.2   </td><td>70.90 </td><td>12.2  </td><td>47.4  </td><td> 35   </td><td>262134</td></tr>
-	<tr><th scope=row>New York</th><td>18076 </td><td>4903  </td><td>1.4   </td><td>70.55 </td><td>10.9  </td><td>52.7  </td><td> 82   </td><td> 47831</td></tr>
-	<tr><th scope=row>California</th><td>21198 </td><td>5114  </td><td>1.1   </td><td>71.71 </td><td>10.3  </td><td>62.6  </td><td> 20   </td><td>156361</td></tr>
+	<tr><th scope=row>Illinois</th><td>11197 </td><td>5107  </td><td>0.9   </td><td>70.14 </td><td>10.3  </td><td>52.6  </td><td>127   </td><td> 55748</td><td>11.197</td></tr>
+	<tr><th scope=row>Pennsylvania</th><td>11860 </td><td>4449  </td><td>1.0   </td><td>70.43 </td><td> 6.1  </td><td>50.2  </td><td>126   </td><td> 44966</td><td>11.860</td></tr>
+	<tr><th scope=row>Texas</th><td>12237 </td><td>4188  </td><td>2.2   </td><td>70.90 </td><td>12.2  </td><td>47.4  </td><td> 35   </td><td>262134</td><td>12.237</td></tr>
+	<tr><th scope=row>New York</th><td>18076 </td><td>4903  </td><td>1.4   </td><td>70.55 </td><td>10.9  </td><td>52.7  </td><td> 82   </td><td> 47831</td><td>18.076</td></tr>
+	<tr><th scope=row>California</th><td>21198 </td><td>5114  </td><td>1.1   </td><td>71.71 </td><td>10.3  </td><td>62.6  </td><td> 20   </td><td>156361</td><td>21.198</td></tr>
 </tbody>
 </table>
 
@@ -1268,7 +1821,7 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_35_1.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_51_1.png"
 >
 </div>
 
@@ -1287,8 +1840,13 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Income&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="nf">quantile</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Income&#39;</span><span class="n">]</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Income</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">quantiles</span> <span class="o">&lt;-</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Income</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span> <span class="m">0.75</span><span class="p">))</span>
+<span class="n">lower</span> <span class="o">&lt;-</span> <span class="n">quantiles[[1]]</span>
+<span class="n">upper</span> <span class="o">&lt;-</span> <span class="n">quantiles[[2]]</span>
+<span class="n">out</span> <span class="o">&lt;-</span> <span class="n">upper</span> <span class="o">+</span> <span class="p">(</span><span class="n">upper</span><span class="o">-</span><span class="n">lower</span><span class="p">)</span><span class="o">*</span><span class="m">1.5</span>
+<span class="n">outliers</span> <span class="o">&lt;-</span> <span class="n">mystate[mystate</span><span class="o">$</span><span class="n">Income</span> <span class="o">&gt;</span> <span class="n">out</span><span class="p">,</span><span class="n">]</span>
+<span class="n">outliers</span><span class="nf">[order</span><span class="p">(</span><span class="n">outliers</span><span class="o">$</span><span class="n">Income</span><span class="p">),</span><span class="n">]</span>
 </pre></div>
 
     </div>
@@ -1303,18 +1861,12 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 
 <div class="output_html rendered_html output_subarea ">
-<dl class=dl-horizontal>
-	<dt>0%</dt>
-		<dd>3098</dd>
-	<dt>25%</dt>
-		<dd>3992.75</dd>
-	<dt>50%</dt>
-		<dd>4519</dd>
-	<dt>75%</dt>
-		<dd>4813.5</dd>
-	<dt>100%</dt>
-		<dd>6315</dd>
-</dl>
+<table>
+<thead><tr><th></th><th scope=col>Population</th><th scope=col>Income</th><th scope=col>Illiteracy</th><th scope=col>Life Exp</th><th scope=col>Murder</th><th scope=col>HS Grad</th><th scope=col>Frost</th><th scope=col>Area</th><th scope=col>PopulationMil</th></tr></thead>
+<tbody>
+	<tr><th scope=row>Alaska</th><td>365   </td><td>6315  </td><td>1.5   </td><td>69.31 </td><td>11.3  </td><td>66.7  </td><td>152   </td><td>566432</td><td>0.365 </td></tr>
+</tbody>
+</table>
 
 </div>
 
@@ -1326,7 +1878,7 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_36_1.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_52_1.png"
 >
 </div>
 
@@ -1345,7 +1897,13 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Illiteracy&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Illiteracy</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">quantiles</span> <span class="o">&lt;-</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Illiteracy</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span> <span class="m">0.75</span><span class="p">))</span>
+<span class="n">lower</span> <span class="o">&lt;-</span> <span class="n">quantiles[[1]]</span>
+<span class="n">upper</span> <span class="o">&lt;-</span> <span class="n">quantiles[[2]]</span>
+<span class="n">out</span> <span class="o">&lt;-</span> <span class="n">upper</span> <span class="o">+</span> <span class="p">(</span><span class="n">upper</span><span class="o">-</span><span class="n">lower</span><span class="p">)</span><span class="o">*</span><span class="m">1.5</span>
+<span class="n">outliers</span> <span class="o">&lt;-</span> <span class="n">mystate[mystate</span><span class="o">$</span><span class="n">Illiteracy</span> <span class="o">&gt;</span> <span class="n">out</span><span class="p">,</span><span class="n">]</span>
+<span class="n">outliers</span><span class="nf">[order</span><span class="p">(</span><span class="n">outliers</span><span class="o">$</span><span class="n">Illiteracy</span><span class="p">),</span><span class="n">]</span>
 </pre></div>
 
     </div>
@@ -1359,9 +1917,24 @@ Murder        7.3780    6.8500    6.3250</pre>
 <div class="output_area">
 
 
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>Population</th><th scope=col>Income</th><th scope=col>Illiteracy</th><th scope=col>Life Exp</th><th scope=col>Murder</th><th scope=col>HS Grad</th><th scope=col>Frost</th><th scope=col>Area</th><th scope=col>PopulationMil</th></tr></thead>
+<tbody>
+</tbody>
+</table>
+
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_37_0.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_53_1.png"
 >
 </div>
 
@@ -1380,7 +1953,13 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Life Exp&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="s">&quot;Life Exp&quot;</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">quantiles</span> <span class="o">&lt;-</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="s">&quot;Life Exp&quot;</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span> <span class="m">0.75</span><span class="p">))</span>
+<span class="n">lower</span> <span class="o">&lt;-</span> <span class="n">quantiles[[1]]</span>
+<span class="n">upper</span> <span class="o">&lt;-</span> <span class="n">quantiles[[2]]</span>
+<span class="n">out</span> <span class="o">&lt;-</span> <span class="n">upper</span> <span class="o">+</span> <span class="p">(</span><span class="n">upper</span><span class="o">-</span><span class="n">lower</span><span class="p">)</span><span class="o">*</span><span class="m">1.5</span>
+<span class="n">outliers</span> <span class="o">&lt;-</span> <span class="n">mystate[mystate</span><span class="o">$</span><span class="s">&quot;Life Exp&quot;</span> <span class="o">&gt;</span> <span class="n">out</span><span class="p">,</span><span class="n">]</span>
+<span class="n">outliers</span><span class="nf">[order</span><span class="p">(</span><span class="n">outliers</span><span class="o">$</span><span class="s">&quot;Life Exp&quot;</span><span class="p">),</span><span class="n">]</span>
 </pre></div>
 
     </div>
@@ -1394,9 +1973,24 @@ Murder        7.3780    6.8500    6.3250</pre>
 <div class="output_area">
 
 
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>Population</th><th scope=col>Income</th><th scope=col>Illiteracy</th><th scope=col>Life Exp</th><th scope=col>Murder</th><th scope=col>HS Grad</th><th scope=col>Frost</th><th scope=col>Area</th><th scope=col>PopulationMil</th></tr></thead>
+<tbody>
+</tbody>
+</table>
+
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_38_0.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_54_1.png"
 >
 </div>
 
@@ -1415,7 +2009,13 @@ Murder        7.3780    6.8500    6.3250</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Murder&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Murder</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">quantiles</span> <span class="o">&lt;-</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">mystate</span><span class="o">$</span><span class="n">Murder</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span> <span class="m">0.75</span><span class="p">))</span>
+<span class="n">lower</span> <span class="o">&lt;-</span> <span class="n">quantiles[[1]]</span>
+<span class="n">upper</span> <span class="o">&lt;-</span> <span class="n">quantiles[[2]]</span>
+<span class="n">out</span> <span class="o">&lt;-</span> <span class="n">upper</span> <span class="o">+</span> <span class="p">(</span><span class="n">upper</span><span class="o">-</span><span class="n">lower</span><span class="p">)</span><span class="o">*</span><span class="m">1.5</span>
+<span class="n">outliers</span> <span class="o">&lt;-</span> <span class="n">mystate[mystate</span><span class="o">$</span><span class="n">Murder</span> <span class="o">&gt;</span> <span class="n">out</span><span class="p">,</span><span class="n">]</span>
+<span class="n">outliers</span><span class="nf">[order</span><span class="p">(</span><span class="n">outliers</span><span class="o">$</span><span class="n">Murder</span><span class="p">),</span><span class="n">]</span>
 </pre></div>
 
     </div>
@@ -1429,9 +2029,24 @@ Murder        7.3780    6.8500    6.3250</pre>
 <div class="output_area">
 
 
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>Population</th><th scope=col>Income</th><th scope=col>Illiteracy</th><th scope=col>Life Exp</th><th scope=col>Murder</th><th scope=col>HS Grad</th><th scope=col>Frost</th><th scope=col>Area</th><th scope=col>PopulationMil</th></tr></thead>
+<tbody>
+</tbody>
+</table>
+
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_39_0.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_55_1.png"
 >
 </div>
 
