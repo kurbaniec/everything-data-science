@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Werkzeuge zur Visualisierung</title>
-  <meta name="description" content="        Werkzeuge zur Visualisierung    (Holdgraf, de Heer, Pasley, &amp; Knight, 2014)    # Init librariesinstall.packages(&quot;lmtest&quot;, repos=&quot;h...">
+  <meta name="description" content="        Werkzeuge zur Visualisierung        # Init librariesinstall.packages(&quot;lmtest&quot;, repos=&quot;https://cran.wu.ac.at/&quot;)install.packages(&q...">
 
   <link rel="canonical" href="https://kurbaniec-tgm.github.io/everything-data-science/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung.html">
   <link rel="alternate" type="application/rss+xml" title="Everything Data Science" href="https://kurbaniec-tgm.github.io/everything-data-science/feed.xml">
@@ -14,7 +14,7 @@
   <meta property="og:url"         content="https://kurbaniec-tgm.github.io/everything-data-science/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Werkzeuge zur Visualisierung" />
-<meta property="og:description" content="        Werkzeuge zur Visualisierung    (Holdgraf, de Heer, Pasley, &amp; Knight, 2014)    # Init librariesinstall.packages(&quot;lmtest&quot;, repos=&quot;h..." />
+<meta property="og:description" content="        Werkzeuge zur Visualisierung        # Init librariesinstall.packages(&quot;lmtest&quot;, repos=&quot;https://cran.wu.ac.at/&quot;)install.packages(&q..." />
 <meta property="og:image"       content="https://kurbaniec-tgm.github.io/everything-data-science/images/logo/logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -26,9 +26,9 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://kurbaniec-tgm.github.io/everything-data-science/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung.html",
   "headline": "Werkzeuge zur Visualisierung",
-  "datePublished": "2020-01-20T10:22:46+01:00",
-  "dateModified": "2020-01-20T10:22:46+01:00",
-  "description": "        Werkzeuge zur Visualisierung    (Holdgraf, de Heer, Pasley, &amp; Knight, 2014)    # Init librariesinstall.packages(&quot;lmtest&quot;, repos=&quot;h...",
+  "datePublished": "2020-01-20T16:03:31+01:00",
+  "dateModified": "2020-01-20T16:03:31+01:00",
+  "description": "        Werkzeuge zur Visualisierung        # Init librariesinstall.packages(&quot;lmtest&quot;, repos=&quot;https://cran.wu.ac.at/&quot;)install.packages(&q...",
   "author": {
     "@type": "Person",
     "name": "Kacper Urbaniec"
@@ -303,7 +303,7 @@ initFunction(initPrint)
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <a href="https://jupyterbook.org/"><img src="/everything-data-science/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
+  <a href="https://kurbaniec-tgm.github.io/everything-data-science/intro"><img src="/everything-data-science/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" alt="textbook logo" data-turbolinks-permanent/></a>
   <h2 class="c-sidebar__title">Everything Data Science</h2>
   <ul class="c-sidebar__chapters">
     
@@ -589,17 +589,6 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a class="citation" href="#holdgraf_evidence_2014">(Holdgraf, de Heer, Pasley, &amp; Knight, 2014)</a></p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 
 </div>
 </div>
@@ -841,7 +830,7 @@ you could try '??ti'
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_9_0.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_8_0.png"
 >
 </div>
 
@@ -879,7 +868,6 @@ you could try '??ti'
 
 <span class="c1"># Make a table from matrix </span>
 <span class="c1"># https://www.dummies.com/programming/r/how-to-create-a-two-way-data-table-with-r/</span>
-<span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;1st&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="m">0</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;1st&quot;</span><span class="n">]</span><span class="p">)</span>
 <span class="n">percentages</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span>
     <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;1st&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;1st&quot;</span><span class="n">]</span><span class="p">),</span>
     <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;2nd&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;2nd&quot;</span><span class="n">]</span><span class="p">),</span>
@@ -910,29 +898,7 @@ you could try '??ti'
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_10_0.png"
->
-</div>
-
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea ">
-0
-</div>
-
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-
-<div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_10_2.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_9_0.png"
 >
 </div>
 
@@ -944,7 +910,19 @@ you could try '??ti'
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_10_3.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_9_1.png"
+>
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_9_2.png"
 >
 </div>
 
@@ -1012,7 +990,7 @@ you could try '??ti'
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_12_0.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_11_0.png"
 >
 </div>
 
@@ -1024,7 +1002,7 @@ you could try '??ti'
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_12_1.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_11_1.png"
 >
 </div>
 
@@ -1124,7 +1102,7 @@ crew 0.2370787</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_16_1.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_15_1.png"
 >
 </div>
 
@@ -1196,7 +1174,7 @@ Crew        0.2202999</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_18_1.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_17_1.png"
 >
 </div>
 
@@ -1257,7 +1235,7 @@ Crew        0.8695652</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_19_1.png"
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_18_1.png"
 >
 </div>
 
@@ -1480,26 +1458,21 @@ Wadsworth &amp; Brooks/Cole.
 
 <div class="jb_cell">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="7.-Ermittle-mithilfe-geeigneter-Sch&#228;tzer-f&#252;r-die-Lage-und-Streuung-der-ersten-5-Variablen,-Population,-Income,-Illiteracy,-Life-Exp(ectancy)-und-Murder.">7. Ermittle mithilfe geeigneter Sch&#228;tzer f&#252;r die Lage und Streuung der ersten 5 Variablen, Population, Income, Illiteracy, Life Exp(ectancy) und Murder.<a class="anchor-link" href="#7.-Ermittle-mithilfe-geeigneter-Sch&#228;tzer-f&#252;r-die-Lage-und-Streuung-der-ersten-5-Variablen,-Population,-Income,-Illiteracy,-Life-Exp(ectancy)-und-Murder."> </a></h3>
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Population&#39;</span><span class="n">]</span>
-<span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Income&#39;</span><span class="n">]</span>
-<span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Illiteracy&#39;</span><span class="n">]</span>
-<span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Life Exp&#39;</span><span class="n">]</span>
-<span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Murder&#39;</span><span class="n">]</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Combine Data to one table</span>
+<span class="c1"># Source: https://stackoverflow.com/a/46416845</span>
+<span class="n">mystate</span> <span class="o">&lt;-</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="n">state.x77</span><span class="p">)</span>
+<span class="c1"># head(mystate)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Population&#39;</span><span class="n">]</span><span class="p">)</span>
+<span class="c1"># Alternative call: head(mystate$Population)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Income&#39;</span><span class="n">]</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Illiteracy&#39;</span><span class="n">]</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Life Exp&#39;</span><span class="n">]</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Murder&#39;</span><span class="n">]</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1527,94 +1500,6 @@ Wadsworth &amp; Brooks/Cole.
 		<dd>21198</dd>
 	<dt>Colorado</dt>
 		<dd>2541</dd>
-	<dt>Connecticut</dt>
-		<dd>3100</dd>
-	<dt>Delaware</dt>
-		<dd>579</dd>
-	<dt>Florida</dt>
-		<dd>8277</dd>
-	<dt>Georgia</dt>
-		<dd>4931</dd>
-	<dt>Hawaii</dt>
-		<dd>868</dd>
-	<dt>Idaho</dt>
-		<dd>813</dd>
-	<dt>Illinois</dt>
-		<dd>11197</dd>
-	<dt>Indiana</dt>
-		<dd>5313</dd>
-	<dt>Iowa</dt>
-		<dd>2861</dd>
-	<dt>Kansas</dt>
-		<dd>2280</dd>
-	<dt>Kentucky</dt>
-		<dd>3387</dd>
-	<dt>Louisiana</dt>
-		<dd>3806</dd>
-	<dt>Maine</dt>
-		<dd>1058</dd>
-	<dt>Maryland</dt>
-		<dd>4122</dd>
-	<dt>Massachusetts</dt>
-		<dd>5814</dd>
-	<dt>Michigan</dt>
-		<dd>9111</dd>
-	<dt>Minnesota</dt>
-		<dd>3921</dd>
-	<dt>Mississippi</dt>
-		<dd>2341</dd>
-	<dt>Missouri</dt>
-		<dd>4767</dd>
-	<dt>Montana</dt>
-		<dd>746</dd>
-	<dt>Nebraska</dt>
-		<dd>1544</dd>
-	<dt>Nevada</dt>
-		<dd>590</dd>
-	<dt>New Hampshire</dt>
-		<dd>812</dd>
-	<dt>New Jersey</dt>
-		<dd>7333</dd>
-	<dt>New Mexico</dt>
-		<dd>1144</dd>
-	<dt>New York</dt>
-		<dd>18076</dd>
-	<dt>North Carolina</dt>
-		<dd>5441</dd>
-	<dt>North Dakota</dt>
-		<dd>637</dd>
-	<dt>Ohio</dt>
-		<dd>10735</dd>
-	<dt>Oklahoma</dt>
-		<dd>2715</dd>
-	<dt>Oregon</dt>
-		<dd>2284</dd>
-	<dt>Pennsylvania</dt>
-		<dd>11860</dd>
-	<dt>Rhode Island</dt>
-		<dd>931</dd>
-	<dt>South Carolina</dt>
-		<dd>2816</dd>
-	<dt>South Dakota</dt>
-		<dd>681</dd>
-	<dt>Tennessee</dt>
-		<dd>4173</dd>
-	<dt>Texas</dt>
-		<dd>12237</dd>
-	<dt>Utah</dt>
-		<dd>1203</dd>
-	<dt>Vermont</dt>
-		<dd>472</dd>
-	<dt>Virginia</dt>
-		<dd>4981</dd>
-	<dt>Washington</dt>
-		<dd>3559</dd>
-	<dt>West Virginia</dt>
-		<dd>1799</dd>
-	<dt>Wisconsin</dt>
-		<dd>4589</dd>
-	<dt>Wyoming</dt>
-		<dd>376</dd>
 </dl>
 
 </div>
@@ -1639,94 +1524,6 @@ Wadsworth &amp; Brooks/Cole.
 		<dd>5114</dd>
 	<dt>Colorado</dt>
 		<dd>4884</dd>
-	<dt>Connecticut</dt>
-		<dd>5348</dd>
-	<dt>Delaware</dt>
-		<dd>4809</dd>
-	<dt>Florida</dt>
-		<dd>4815</dd>
-	<dt>Georgia</dt>
-		<dd>4091</dd>
-	<dt>Hawaii</dt>
-		<dd>4963</dd>
-	<dt>Idaho</dt>
-		<dd>4119</dd>
-	<dt>Illinois</dt>
-		<dd>5107</dd>
-	<dt>Indiana</dt>
-		<dd>4458</dd>
-	<dt>Iowa</dt>
-		<dd>4628</dd>
-	<dt>Kansas</dt>
-		<dd>4669</dd>
-	<dt>Kentucky</dt>
-		<dd>3712</dd>
-	<dt>Louisiana</dt>
-		<dd>3545</dd>
-	<dt>Maine</dt>
-		<dd>3694</dd>
-	<dt>Maryland</dt>
-		<dd>5299</dd>
-	<dt>Massachusetts</dt>
-		<dd>4755</dd>
-	<dt>Michigan</dt>
-		<dd>4751</dd>
-	<dt>Minnesota</dt>
-		<dd>4675</dd>
-	<dt>Mississippi</dt>
-		<dd>3098</dd>
-	<dt>Missouri</dt>
-		<dd>4254</dd>
-	<dt>Montana</dt>
-		<dd>4347</dd>
-	<dt>Nebraska</dt>
-		<dd>4508</dd>
-	<dt>Nevada</dt>
-		<dd>5149</dd>
-	<dt>New Hampshire</dt>
-		<dd>4281</dd>
-	<dt>New Jersey</dt>
-		<dd>5237</dd>
-	<dt>New Mexico</dt>
-		<dd>3601</dd>
-	<dt>New York</dt>
-		<dd>4903</dd>
-	<dt>North Carolina</dt>
-		<dd>3875</dd>
-	<dt>North Dakota</dt>
-		<dd>5087</dd>
-	<dt>Ohio</dt>
-		<dd>4561</dd>
-	<dt>Oklahoma</dt>
-		<dd>3983</dd>
-	<dt>Oregon</dt>
-		<dd>4660</dd>
-	<dt>Pennsylvania</dt>
-		<dd>4449</dd>
-	<dt>Rhode Island</dt>
-		<dd>4558</dd>
-	<dt>South Carolina</dt>
-		<dd>3635</dd>
-	<dt>South Dakota</dt>
-		<dd>4167</dd>
-	<dt>Tennessee</dt>
-		<dd>3821</dd>
-	<dt>Texas</dt>
-		<dd>4188</dd>
-	<dt>Utah</dt>
-		<dd>4022</dd>
-	<dt>Vermont</dt>
-		<dd>3907</dd>
-	<dt>Virginia</dt>
-		<dd>4701</dd>
-	<dt>Washington</dt>
-		<dd>4864</dd>
-	<dt>West Virginia</dt>
-		<dd>3617</dd>
-	<dt>Wisconsin</dt>
-		<dd>4468</dd>
-	<dt>Wyoming</dt>
-		<dd>4566</dd>
 </dl>
 
 </div>
@@ -1751,94 +1548,6 @@ Wadsworth &amp; Brooks/Cole.
 		<dd>1.1</dd>
 	<dt>Colorado</dt>
 		<dd>0.7</dd>
-	<dt>Connecticut</dt>
-		<dd>1.1</dd>
-	<dt>Delaware</dt>
-		<dd>0.9</dd>
-	<dt>Florida</dt>
-		<dd>1.3</dd>
-	<dt>Georgia</dt>
-		<dd>2</dd>
-	<dt>Hawaii</dt>
-		<dd>1.9</dd>
-	<dt>Idaho</dt>
-		<dd>0.6</dd>
-	<dt>Illinois</dt>
-		<dd>0.9</dd>
-	<dt>Indiana</dt>
-		<dd>0.7</dd>
-	<dt>Iowa</dt>
-		<dd>0.5</dd>
-	<dt>Kansas</dt>
-		<dd>0.6</dd>
-	<dt>Kentucky</dt>
-		<dd>1.6</dd>
-	<dt>Louisiana</dt>
-		<dd>2.8</dd>
-	<dt>Maine</dt>
-		<dd>0.7</dd>
-	<dt>Maryland</dt>
-		<dd>0.9</dd>
-	<dt>Massachusetts</dt>
-		<dd>1.1</dd>
-	<dt>Michigan</dt>
-		<dd>0.9</dd>
-	<dt>Minnesota</dt>
-		<dd>0.6</dd>
-	<dt>Mississippi</dt>
-		<dd>2.4</dd>
-	<dt>Missouri</dt>
-		<dd>0.8</dd>
-	<dt>Montana</dt>
-		<dd>0.6</dd>
-	<dt>Nebraska</dt>
-		<dd>0.6</dd>
-	<dt>Nevada</dt>
-		<dd>0.5</dd>
-	<dt>New Hampshire</dt>
-		<dd>0.7</dd>
-	<dt>New Jersey</dt>
-		<dd>1.1</dd>
-	<dt>New Mexico</dt>
-		<dd>2.2</dd>
-	<dt>New York</dt>
-		<dd>1.4</dd>
-	<dt>North Carolina</dt>
-		<dd>1.8</dd>
-	<dt>North Dakota</dt>
-		<dd>0.8</dd>
-	<dt>Ohio</dt>
-		<dd>0.8</dd>
-	<dt>Oklahoma</dt>
-		<dd>1.1</dd>
-	<dt>Oregon</dt>
-		<dd>0.6</dd>
-	<dt>Pennsylvania</dt>
-		<dd>1</dd>
-	<dt>Rhode Island</dt>
-		<dd>1.3</dd>
-	<dt>South Carolina</dt>
-		<dd>2.3</dd>
-	<dt>South Dakota</dt>
-		<dd>0.5</dd>
-	<dt>Tennessee</dt>
-		<dd>1.7</dd>
-	<dt>Texas</dt>
-		<dd>2.2</dd>
-	<dt>Utah</dt>
-		<dd>0.6</dd>
-	<dt>Vermont</dt>
-		<dd>0.6</dd>
-	<dt>Virginia</dt>
-		<dd>1.4</dd>
-	<dt>Washington</dt>
-		<dd>0.6</dd>
-	<dt>West Virginia</dt>
-		<dd>1.4</dd>
-	<dt>Wisconsin</dt>
-		<dd>0.7</dd>
-	<dt>Wyoming</dt>
-		<dd>0.6</dd>
 </dl>
 
 </div>
@@ -1863,94 +1572,6 @@ Wadsworth &amp; Brooks/Cole.
 		<dd>71.71</dd>
 	<dt>Colorado</dt>
 		<dd>72.06</dd>
-	<dt>Connecticut</dt>
-		<dd>72.48</dd>
-	<dt>Delaware</dt>
-		<dd>70.06</dd>
-	<dt>Florida</dt>
-		<dd>70.66</dd>
-	<dt>Georgia</dt>
-		<dd>68.54</dd>
-	<dt>Hawaii</dt>
-		<dd>73.6</dd>
-	<dt>Idaho</dt>
-		<dd>71.87</dd>
-	<dt>Illinois</dt>
-		<dd>70.14</dd>
-	<dt>Indiana</dt>
-		<dd>70.88</dd>
-	<dt>Iowa</dt>
-		<dd>72.56</dd>
-	<dt>Kansas</dt>
-		<dd>72.58</dd>
-	<dt>Kentucky</dt>
-		<dd>70.1</dd>
-	<dt>Louisiana</dt>
-		<dd>68.76</dd>
-	<dt>Maine</dt>
-		<dd>70.39</dd>
-	<dt>Maryland</dt>
-		<dd>70.22</dd>
-	<dt>Massachusetts</dt>
-		<dd>71.83</dd>
-	<dt>Michigan</dt>
-		<dd>70.63</dd>
-	<dt>Minnesota</dt>
-		<dd>72.96</dd>
-	<dt>Mississippi</dt>
-		<dd>68.09</dd>
-	<dt>Missouri</dt>
-		<dd>70.69</dd>
-	<dt>Montana</dt>
-		<dd>70.56</dd>
-	<dt>Nebraska</dt>
-		<dd>72.6</dd>
-	<dt>Nevada</dt>
-		<dd>69.03</dd>
-	<dt>New Hampshire</dt>
-		<dd>71.23</dd>
-	<dt>New Jersey</dt>
-		<dd>70.93</dd>
-	<dt>New Mexico</dt>
-		<dd>70.32</dd>
-	<dt>New York</dt>
-		<dd>70.55</dd>
-	<dt>North Carolina</dt>
-		<dd>69.21</dd>
-	<dt>North Dakota</dt>
-		<dd>72.78</dd>
-	<dt>Ohio</dt>
-		<dd>70.82</dd>
-	<dt>Oklahoma</dt>
-		<dd>71.42</dd>
-	<dt>Oregon</dt>
-		<dd>72.13</dd>
-	<dt>Pennsylvania</dt>
-		<dd>70.43</dd>
-	<dt>Rhode Island</dt>
-		<dd>71.9</dd>
-	<dt>South Carolina</dt>
-		<dd>67.96</dd>
-	<dt>South Dakota</dt>
-		<dd>72.08</dd>
-	<dt>Tennessee</dt>
-		<dd>70.11</dd>
-	<dt>Texas</dt>
-		<dd>70.9</dd>
-	<dt>Utah</dt>
-		<dd>72.9</dd>
-	<dt>Vermont</dt>
-		<dd>71.64</dd>
-	<dt>Virginia</dt>
-		<dd>70.08</dd>
-	<dt>Washington</dt>
-		<dd>71.72</dd>
-	<dt>West Virginia</dt>
-		<dd>69.48</dd>
-	<dt>Wisconsin</dt>
-		<dd>72.48</dd>
-	<dt>Wyoming</dt>
-		<dd>70.29</dd>
 </dl>
 
 </div>
@@ -1975,100 +1596,124 @@ Wadsworth &amp; Brooks/Cole.
 		<dd>10.3</dd>
 	<dt>Colorado</dt>
 		<dd>6.8</dd>
-	<dt>Connecticut</dt>
-		<dd>3.1</dd>
-	<dt>Delaware</dt>
-		<dd>6.2</dd>
-	<dt>Florida</dt>
-		<dd>10.7</dd>
-	<dt>Georgia</dt>
-		<dd>13.9</dd>
-	<dt>Hawaii</dt>
-		<dd>6.2</dd>
-	<dt>Idaho</dt>
-		<dd>5.3</dd>
-	<dt>Illinois</dt>
-		<dd>10.3</dd>
-	<dt>Indiana</dt>
-		<dd>7.1</dd>
-	<dt>Iowa</dt>
-		<dd>2.3</dd>
-	<dt>Kansas</dt>
-		<dd>4.5</dd>
-	<dt>Kentucky</dt>
-		<dd>10.6</dd>
-	<dt>Louisiana</dt>
-		<dd>13.2</dd>
-	<dt>Maine</dt>
-		<dd>2.7</dd>
-	<dt>Maryland</dt>
-		<dd>8.5</dd>
-	<dt>Massachusetts</dt>
-		<dd>3.3</dd>
-	<dt>Michigan</dt>
-		<dd>11.1</dd>
-	<dt>Minnesota</dt>
-		<dd>2.3</dd>
-	<dt>Mississippi</dt>
-		<dd>12.5</dd>
-	<dt>Missouri</dt>
-		<dd>9.3</dd>
-	<dt>Montana</dt>
-		<dd>5</dd>
-	<dt>Nebraska</dt>
-		<dd>2.9</dd>
-	<dt>Nevada</dt>
-		<dd>11.5</dd>
-	<dt>New Hampshire</dt>
-		<dd>3.3</dd>
-	<dt>New Jersey</dt>
-		<dd>5.2</dd>
-	<dt>New Mexico</dt>
-		<dd>9.7</dd>
-	<dt>New York</dt>
-		<dd>10.9</dd>
-	<dt>North Carolina</dt>
-		<dd>11.1</dd>
-	<dt>North Dakota</dt>
-		<dd>1.4</dd>
-	<dt>Ohio</dt>
-		<dd>7.4</dd>
-	<dt>Oklahoma</dt>
-		<dd>6.4</dd>
-	<dt>Oregon</dt>
-		<dd>4.2</dd>
-	<dt>Pennsylvania</dt>
-		<dd>6.1</dd>
-	<dt>Rhode Island</dt>
-		<dd>2.4</dd>
-	<dt>South Carolina</dt>
-		<dd>11.6</dd>
-	<dt>South Dakota</dt>
-		<dd>1.7</dd>
-	<dt>Tennessee</dt>
-		<dd>11</dd>
-	<dt>Texas</dt>
-		<dd>12.2</dd>
-	<dt>Utah</dt>
-		<dd>4.5</dd>
-	<dt>Vermont</dt>
-		<dd>5.5</dd>
-	<dt>Virginia</dt>
-		<dd>9.5</dd>
-	<dt>Washington</dt>
-		<dd>4.3</dd>
-	<dt>West Virginia</dt>
-		<dd>6.7</dd>
-	<dt>Wisconsin</dt>
-		<dd>3</dd>
-	<dt>Wyoming</dt>
-		<dd>6.9</dd>
 </dl>
 
 </div>
 
 </div>
 </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Was kann man aus den Daten schließen? Es handelt sich um rationale und numerische Werte.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="7.-Ermittle-mithilfe-geeigneter-Sch&#228;tzer-f&#252;r-die-Lage-und-Streuung-der-ersten-5-Variablen,-Population,-Income,-Illiteracy,-Life-Exp(ectancy)-und-Murder.">7. Ermittle mithilfe geeigneter Sch&#228;tzer f&#252;r die Lage und Streuung der ersten 5 Variablen, Population, Income, Illiteracy, Life Exp(ectancy) und Murder.<a class="anchor-link" href="#7.-Ermittle-mithilfe-geeigneter-Sch&#228;tzer-f&#252;r-die-Lage-und-Streuung-der-ersten-5-Variablen,-Population,-Income,-Illiteracy,-Life-Exp(ectancy)-und-Murder."> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">full</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span>
+    <span class="nf">mean</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Population&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">mean</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Income&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">mean</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Illiteracy&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">mean</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Life Exp&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">mean</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Murder&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">median</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Population&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">median</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Income&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">median</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Illiteracy&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">median</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Life Exp&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">median</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Murder&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">IQR</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Population&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">IQR</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Income&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">IQR</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Illiteracy&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">IQR</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Life Exp&#39;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">IQR</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Murder&#39;</span><span class="n">]</span><span class="p">)</span>
+<span class="p">),</span> <span class="n">ncol</span><span class="o">=</span><span class="m">3</span><span class="p">)</span>
+<span class="nf">rownames</span><span class="p">(</span><span class="n">full</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Population&quot;</span><span class="p">,</span> <span class="s">&quot;Income&quot;</span><span class="p">,</span> <span class="s">&quot;Illiteracy&quot;</span><span class="p">,</span> <span class="s">&quot;Life Exp&quot;</span><span class="p">,</span> <span class="s">&quot;Murder&quot;</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">full</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Mean&quot;</span><span class="p">,</span> <span class="s">&quot;Median&quot;</span><span class="p">,</span> <span class="s">&quot;IQR&quot;</span><span class="p">)</span>
+<span class="n">full</span> <span class="o">&lt;-</span> <span class="nf">as.table</span><span class="p">(</span><span class="n">full</span><span class="p">)</span>
+<span class="n">full</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea ">
+<pre>                Mean    Median       IQR
+Population 4246.4200 2838.5000 3889.0000
+Income     4435.8000 4519.0000  820.7500
+Illiteracy    1.1700    0.9500    0.9500
+Life Exp     70.8786   70.6750    1.7750
+Murder        7.3780    6.8500    6.3250</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Median und Quartilsabstand, arithmetischer Mittelwert</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1">#state.x77[,&#39;Population&#39;]</span>
+<span class="c1">#state.x77[,&#39;Income&#39;]</span>
+<span class="c1">#state.x77[,&#39;Illiteracy&#39;]</span>
+<span class="c1">#state.x77[,&#39;Life Exp&#39;]</span>
+<span class="c1">#state.x77[,&#39;Murder&#39;]</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -2089,7 +1734,29 @@ Wadsworth &amp; Brooks/Cole.
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Histogramm, Boxpolot</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="9.-Begr&#252;nde-anhand-der-graphischen-Darstellung,-ob-es-sich-symmetrische-oder-schiefe-Datenverteilungen-handelt.-Begr&#252;nde-anhand-der-graphischen-Darstellungen,-ob-schwere-oder-leichte-R&#228;nder-vorliegen-(und-auf-welcher-Seite).">9. Begr&#252;nde anhand der graphischen Darstellung, ob es sich symmetrische oder schiefe Datenverteilungen handelt. Begr&#252;nde anhand der graphischen Darstellungen, ob schwere oder leichte R&#228;nder vorliegen (und auf welcher Seite).<a class="anchor-link" href="#9.-Begr&#252;nde-anhand-der-graphischen-Darstellung,-ob-es-sich-symmetrische-oder-schiefe-Datenverteilungen-handelt.-Begr&#252;nde-anhand-der-graphischen-Darstellungen,-ob-schwere-oder-leichte-R&#228;nder-vorliegen-(und-auf-welcher-Seite)."> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Histogrammm mit dieser Linie</p>
+
 </div>
 </div>
 </div>
@@ -2109,8 +1776,244 @@ Wadsworth &amp; Brooks/Cole.
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><ol class="bibliography"><li><span id="holdgraf_evidence_2014">Holdgraf, C. R., de Heer, W., Pasley, B. N., &amp; Knight, R. T. (2014). Evidence for Predictive Coding in Human Auditory Cortex. In <i>International Conference on Cognitive Neuroscience</i>. Brisbane, Australia, Australia: Frontiers in Neuroscience.</span></li>
-<li><span id="simpson">Simpson Paradox. (2012). Duke University. Retrieved from https://www2.stat.duke.edu/courses/Fall12/sta611/SimpsonsParadox.pdf</span></li></ol></p>
+<p>Ausreißer Boxplot</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Population&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">quantiles</span> <span class="o">&lt;-</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Population&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span> <span class="m">0.75</span><span class="p">))</span>
+<span class="n">lower</span> <span class="o">&lt;-</span> <span class="n">quantiles[[1]]</span>
+<span class="n">upper</span> <span class="o">&lt;-</span> <span class="n">quantiles[[2]]</span>
+<span class="n">out</span> <span class="o">&lt;-</span> <span class="n">upper</span> <span class="o">+</span> <span class="p">(</span><span class="n">upper</span><span class="o">-</span><span class="n">lower</span><span class="p">)</span><span class="o">*</span><span class="m">1.5</span>
+<span class="c1"># Output with matrix: state.x77[state.x77[,&#39;Population&#39;] &gt; out,]</span>
+<span class="c1"># Output with own table:</span>
+<span class="n">outliers</span> <span class="o">&lt;-</span> <span class="n">mystate[mystate</span><span class="o">$</span><span class="n">Population</span> <span class="o">&gt;</span> <span class="n">out</span><span class="p">,</span><span class="n">]</span>
+<span class="n">outliers</span><span class="nf">[order</span><span class="p">(</span><span class="n">outliers</span><span class="o">$</span><span class="n">Population</span><span class="p">),</span><span class="n">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope=col>Population</th><th scope=col>Income</th><th scope=col>Illiteracy</th><th scope=col>Life Exp</th><th scope=col>Murder</th><th scope=col>HS Grad</th><th scope=col>Frost</th><th scope=col>Area</th></tr></thead>
+<tbody>
+	<tr><th scope=row>Illinois</th><td>11197 </td><td>5107  </td><td>0.9   </td><td>70.14 </td><td>10.3  </td><td>52.6  </td><td>127   </td><td> 55748</td></tr>
+	<tr><th scope=row>Pennsylvania</th><td>11860 </td><td>4449  </td><td>1.0   </td><td>70.43 </td><td> 6.1  </td><td>50.2  </td><td>126   </td><td> 44966</td></tr>
+	<tr><th scope=row>Texas</th><td>12237 </td><td>4188  </td><td>2.2   </td><td>70.90 </td><td>12.2  </td><td>47.4  </td><td> 35   </td><td>262134</td></tr>
+	<tr><th scope=row>New York</th><td>18076 </td><td>4903  </td><td>1.4   </td><td>70.55 </td><td>10.9  </td><td>52.7  </td><td> 82   </td><td> 47831</td></tr>
+	<tr><th scope=row>California</th><td>21198 </td><td>5114  </td><td>1.1   </td><td>71.71 </td><td>10.3  </td><td>62.6  </td><td> 20   </td><td>156361</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_35_1.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Income&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="nf">quantile</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Income&#39;</span><span class="n">]</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<dl class=dl-horizontal>
+	<dt>0%</dt>
+		<dd>3098</dd>
+	<dt>25%</dt>
+		<dd>3992.75</dd>
+	<dt>50%</dt>
+		<dd>4519</dd>
+	<dt>75%</dt>
+		<dd>4813.5</dd>
+	<dt>100%</dt>
+		<dd>6315</dd>
+</dl>
+
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_36_1.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Illiteracy&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_37_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Life Exp&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_38_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">state.x77[</span><span class="p">,</span><span class="s">&#39;Murder&#39;</span><span class="n">]</span><span class="p">,</span> <span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_39_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><ol class="bibliography"><li><span id="simpson">Simpson Paradox. (2012). Duke University. Retrieved from https://www2.stat.duke.edu/courses/Fall12/sta611/SimpsonsParadox.pdf</span></li></ol></p>
 
 </div>
 </div>
