@@ -11,7 +11,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: der und anhand r die daten ob den datensatz hilfreiche befehle von oder variablen geeigneter begrnde darstellungen graphischen lade titanic beschreibe internen hilfe mithilfe rnder auf stelle weise graphisch dar sich fr ersten population income illiteracy life exp ectancy murder vorliegen aus cite holdgrafevidence www quotedb com quotes help untersuche tabellen absoluten relativen hufigkeiten heruntergebrochen je dimensionen table ftable colsums rowsums apply xtable barplot mosaicplot assocplot quantitativen ergebnisse frauen kinder zuerst bei seenotrettung bercksichtigt wurden erklre wo anzeichen simpsons paradoxon finden lassen state x ermittle schtzer lage streuung verwende dafr wenigstens unterschiedliche graphische darstellung es symmetrische schiefe datenverteilungen handelt schwere
+search: der die und anhand r daten ob den datensatz hilfe hilfreiche befehle von auf oder variablen geeigneter begrnde kinder fr darstellungen graphischen lade titanic beschreibe internen mithilfe rnder stelle weise graphisch dar frauen zuerst bei bercksichtigt wurden berlebensrate dies sind sich ersten population income illiteracy life exp ectancy murder vorliegen aus cite holdgrafevidence www quotedb com quotes help untersuche tabellen absoluten relativen hufigkeiten heruntergebrochen je dimensionen table ftable colsums rowsums apply xtable barplot mosaicplot assocplot quantitativen ergebnisse seenotrettung haben hchste somit ist vermutung dass diese rettung ziemlich nahe liegend wird wahrscheinlich auch zutreffen jedoch vorallem kleinkinder anderer angewiesen weil sie
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -70,19 +70,19 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <pre>package &#39;lmtest&#39; successfully unpacked and MD5 sums checked
 
 The downloaded binary packages are in
-	C:\Users\aon91\AppData\Local\Temp\RtmpwhL9Nt\downloaded_packages
+	C:\Users\aon91\AppData\Local\Temp\RtmpgDiE7z\downloaded_packages
 package &#39;vcd&#39; successfully unpacked and MD5 sums checked
 
 The downloaded binary packages are in
-	C:\Users\aon91\AppData\Local\Temp\RtmpwhL9Nt\downloaded_packages
+	C:\Users\aon91\AppData\Local\Temp\RtmpgDiE7z\downloaded_packages
 package &#39;ggplot2&#39; successfully unpacked and MD5 sums checked
 
 The downloaded binary packages are in
-	C:\Users\aon91\AppData\Local\Temp\RtmpwhL9Nt\downloaded_packages
+	C:\Users\aon91\AppData\Local\Temp\RtmpgDiE7z\downloaded_packages
 package &#39;stablelearner&#39; successfully unpacked and MD5 sums checked
 
 The downloaded binary packages are in
-	C:\Users\aon91\AppData\Local\Temp\RtmpwhL9Nt\downloaded_packages
+	C:\Users\aon91\AppData\Local\Temp\RtmpgDiE7z\downloaded_packages
 </pre>
 </div>
 </div>
@@ -300,7 +300,6 @@ you could try '??ti'
 <span class="c1"># Delete unused rows</span>
 <span class="c1"># Source: https://stackoverflow.com/questions/37307307/remove-a-row-from-a-data-table-in-r</span>
 <span class="n">counts</span> <span class="o">&lt;-</span> <span class="n">counts[</span><span class="m">-1</span><span class="o">:</span><span class="m">-3</span><span class="p">,</span><span class="n">]</span>
-<span class="n">counts</span>
 <span class="c1"># Order like seaborn: https://stackoverflow.com/a/56808968</span>
 <span class="nf">barplot</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s">&quot;forestgreen&quot;</span><span class="p">,</span> <span class="s">&quot;dodgerblue4&quot;</span><span class="p">),</span>
     <span class="n">legend</span> <span class="o">=</span> <span class="nf">rownames</span><span class="p">(</span><span class="n">counts</span><span class="p">),</span> <span class="n">beside</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;count&quot;</span>
@@ -310,24 +309,6 @@ you could try '??ti'
 <span class="c1"># Order like seaborn: https://stackoverflow.com/a/56808968</span>
 <span class="nf">barplot</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s">&quot;forestgreen&quot;</span><span class="p">,</span> <span class="s">&quot;dodgerblue4&quot;</span><span class="p">),</span>
     <span class="n">legend</span> <span class="o">=</span> <span class="nf">rownames</span><span class="p">(</span><span class="n">counts</span><span class="p">),</span> <span class="n">beside</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;count&quot;</span>
-<span class="p">)</span>
-
-<span class="c1"># Make a table from matrix </span>
-<span class="c1"># https://www.dummies.com/programming/r/how-to-create-a-two-way-data-table-with-r/</span>
-<span class="n">percentages</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">1</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">0</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">1</span><span class="n">]</span><span class="p">),</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">2</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">0</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">2</span><span class="n">]</span><span class="p">),</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">3</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">0</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">3</span><span class="n">]</span><span class="p">),</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">1</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">1</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">1</span><span class="n">]</span><span class="p">),</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">2</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">1</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">2</span><span class="n">]</span><span class="p">),</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">3</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">1</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Pclass[ti</span><span class="o">$</span><span class="n">Pclass</span><span class="o">==</span><span class="m">3</span><span class="n">]</span><span class="p">)</span>
-<span class="p">),</span> <span class="n">ncol</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
-<span class="nf">colnames</span><span class="p">(</span><span class="n">percentages</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
-<span class="nf">rownames</span><span class="p">(</span><span class="n">percentages</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
-<span class="n">percentages</span> <span class="o">&lt;-</span> <span class="nf">as.table</span><span class="p">(</span><span class="n">percentages</span><span class="p">)</span>
-
-<span class="nf">barplot</span><span class="p">(</span><span class="n">percentages</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s">&quot;forestgreen&quot;</span><span class="p">,</span> <span class="s">&quot;dodgerblue4&quot;</span><span class="p">),</span>
-    <span class="n">legend</span> <span class="o">=</span> <span class="nf">rownames</span><span class="p">(</span><span class="n">percentages</span><span class="p">),</span> <span class="n">beside</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;percentage&quot;</span>
 <span class="p">)</span>
 </pre></div>
 
@@ -343,13 +324,9 @@ you could try '??ti'
 
 
 
-<div class="output_text output_subarea ">
-<pre>                  
-                    no yes
-  deck crew         23  43
-  engineering crew 253  71
-  restaurant staff  66   3
-  victualling crew 337  94</pre>
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_10_0.png"
+>
 </div>
 
 </div>
@@ -361,58 +338,6 @@ you could try '??ti'
 
 <div class="output_png output_subarea ">
 <img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_10_1.png"
->
-</div>
-
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Warning message in min(x):
-&#34;kein nicht-fehlendes Argument für min; gebe Inf zurück&#34;Warning message in max(x):
-&#34;kein nicht-fehlendes Argument für max; gebe -Inf zurück&#34;</pre>
-</div>
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-Error in plot.window(xlim, ylim, log = log, ...): endliche &#39;ylim&#39; Werte nötig
-Traceback:
-
-1. barplot(percentages, col = c(&#34;chocolate&#34;, &#34;forestgreen&#34;, &#34;dodgerblue4&#34;), 
- .     legend = rownames(percentages), beside = TRUE, xlab = &#34;alive&#34;, 
- .     ylab = &#34;percentage&#34;)
-2. barplot.default(percentages, col = c(&#34;chocolate&#34;, &#34;forestgreen&#34;, 
- .     &#34;dodgerblue4&#34;), legend = rownames(percentages), beside = TRUE, 
- .     xlab = &#34;alive&#34;, ylab = &#34;percentage&#34;)
-3. plot.window(xlim, ylim, log = log, ...)</pre>
-</div>
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-
-<div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_10_4.png"
->
-</div>
-
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-
-
-<div class="output_png output_subarea ">
-<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_10_5.png"
 >
 </div>
 
@@ -442,7 +367,7 @@ Traceback:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Form a table with columns class and rows alive</span>
-<span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="p">)</span>
+<span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="p">)</span>
 <span class="c1"># Order like seaborn: https://stackoverflow.com/a/56808968</span>
 <span class="nf">barplot</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s">&quot;forestgreen&quot;</span><span class="p">,</span> <span class="s">&quot;dodgerblue4&quot;</span><span class="p">),</span>
     <span class="n">legend</span> <span class="o">=</span> <span class="nf">rownames</span><span class="p">(</span><span class="n">counts</span><span class="p">),</span> <span class="n">beside</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;count&quot;</span>
@@ -451,17 +376,16 @@ Traceback:
 <span class="c1"># Make a table from matrix </span>
 <span class="c1"># https://www.dummies.com/programming/r/how-to-create-a-two-way-data-table-with-r/</span>
 <span class="n">percentages</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;child&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">0</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;child&quot;</span><span class="n">]</span><span class="p">),</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;man&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">0</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;man&quot;</span><span class="n">]</span><span class="p">),</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">0</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span><span class="n">]</span><span class="p">),</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;child&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">1</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;child&quot;</span><span class="n">]</span><span class="p">),</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;man&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">1</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;man&quot;</span><span class="n">]</span><span class="p">),</span>
-    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">Survived</span><span class="o">==</span><span class="m">1</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">Who[ti</span><span class="o">$</span><span class="n">Who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span><span class="n">]</span><span class="p">)</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;child&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;child&quot;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;man&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;man&quot;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;child&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;yes&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;child&quot;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;man&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;yes&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;man&quot;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;yes&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">who[ti</span><span class="o">$</span><span class="n">who</span><span class="o">==</span><span class="s">&quot;woman&quot;</span><span class="n">]</span><span class="p">)</span>
 <span class="p">),</span> <span class="n">ncol</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
-<span class="nf">colnames</span><span class="p">(</span><span class="n">percentages</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">percentages</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;no&quot;</span><span class="p">,</span> <span class="s">&quot;yes&quot;</span><span class="p">)</span>
 <span class="nf">rownames</span><span class="p">(</span><span class="n">percentages</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;child&quot;</span><span class="p">,</span> <span class="s">&quot;man&quot;</span><span class="p">,</span> <span class="s">&quot;woman&quot;</span><span class="p">)</span>
 <span class="n">percentages</span> <span class="o">&lt;-</span> <span class="nf">as.table</span><span class="p">(</span><span class="n">percentages</span><span class="p">)</span>
-
 <span class="nf">barplot</span><span class="p">(</span><span class="n">percentages</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s">&quot;forestgreen&quot;</span><span class="p">,</span> <span class="s">&quot;dodgerblue4&quot;</span><span class="p">),</span>
     <span class="n">beside</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;percentage&quot;</span>
 <span class="p">)</span>
@@ -472,20 +396,33 @@ Traceback:
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_12_0.png"
+>
+</div>
+
 </div>
 </div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
 
-<div class="jb_cell">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">Männer</span><span class="o">=</span><span class="n">Dead</span>
-</pre></div>
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_12_1.png"
+>
+</div>
 
-    </div>
+</div>
+</div>
 </div>
 </div>
 
@@ -496,9 +433,107 @@ Traceback:
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Frauen haben die höchste Überlebensrate, somit ist die Vermutung, dass diese zuerst bei der Rettung berücksichtigt wurden, ziemlich nahe liegend. Für Kinder wird dies wahrscheinlich auch zutreffen, jedoch sind Kinder, vorallem Kleinkinder, auf die Hilfe anderer angewiesen, weil sie z.B. nicht schwimmen können, was ihre Überlebensrate drastisch reduziert.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="5.-Erkl&#228;re,-wo-sich-Anzeichen-f&#252;r-Simpson's-Paradoxon-finden-lassen.">5. Erkl&#228;re, wo sich Anzeichen f&#252;r Simpson's Paradoxon finden lassen.<a class="anchor-link" href="#5.-Erkl&#228;re,-wo-sich-Anzeichen-f&#252;r-Simpson's-Paradoxon-finden-lassen."> </a></h4>
 </div>
 </div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;yes&quot;</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;crew&quot;</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">class</span><span class="p">)</span> <span class="o">|</span> <span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;staff&quot;</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">class</span><span class="p">))</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span>
+                   <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="nf">[grepl</span><span class="p">(</span><span class="s">&quot;crew&quot;</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">class</span><span class="p">)</span> <span class="o">|</span> <span class="nf">grepl</span><span class="p">(</span><span class="s">&quot;staff&quot;</span><span class="p">,</span> <span class="n">ti</span><span class="o">$</span><span class="n">class</span><span class="p">)</span><span class="n">]</span><span class="p">)</span>
+<span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;yes&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;3rd&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span>
+                   <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">survived[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;3rd&quot;</span><span class="n">]</span><span class="p">)</span>
+
+<span class="c1"># Make a table from matrix </span>
+<span class="c1"># https://www.dummies.com/programming/r/how-to-create-a-two-way-data-table-with-r/</span>
+<span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;1st&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="m">0</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;1st&quot;</span><span class="n">]</span><span class="p">)</span>
+<span class="n">percentages</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;1st&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;1st&quot;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;2nd&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;2nd&quot;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;3rd&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;no&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;3rd&quot;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;1st&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;yes&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;1st&quot;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;2nd&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;yes&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;2nd&quot;</span><span class="n">]</span><span class="p">),</span>
+    <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;3rd&quot;</span> <span class="o">&amp;</span> <span class="n">ti</span><span class="o">$</span><span class="n">survived</span><span class="o">==</span><span class="s">&quot;yes&quot;</span><span class="n">]</span><span class="p">)</span> <span class="o">/</span> <span class="nf">length</span><span class="p">(</span><span class="n">ti</span><span class="o">$</span><span class="n">class[ti</span><span class="o">$</span><span class="n">class</span><span class="o">==</span><span class="s">&quot;3rd&quot;</span><span class="n">]</span><span class="p">)</span>
+<span class="p">),</span> <span class="n">ncol</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">percentages</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+<span class="nf">rownames</span><span class="p">(</span><span class="n">percentages</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="n">percentages</span> <span class="o">&lt;-</span> <span class="nf">as.table</span><span class="p">(</span><span class="n">percentages</span><span class="p">)</span>
+
+<span class="nf">barplot</span><span class="p">(</span><span class="n">percentages</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;chocolate&quot;</span><span class="p">,</span> <span class="s">&quot;forestgreen&quot;</span><span class="p">,</span> <span class="s">&quot;dodgerblue4&quot;</span><span class="p">),</span>
+    <span class="n">legend</span> <span class="o">=</span> <span class="nf">rownames</span><span class="p">(</span><span class="n">percentages</span><span class="p">),</span> <span class="n">beside</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&quot;alive&quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;percentage&quot;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+0.237078651685393
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+0.255289139633286
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+0
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/werkzeuge-zur-visualisierung/werkzeuge-zur-visualisierung_15_3.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 
