@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://kurbaniec-tgm.github.io/everything-data-science/data-visualization/anpassung-von-plots.html",
   "headline": "Anpassung von Plots",
-  "datePublished": "2020-01-21T09:20:18+01:00",
-  "dateModified": "2020-01-21T09:20:18+01:00",
+  "datePublished": "2020-01-21T10:16:53+01:00",
+  "dateModified": "2020-01-21T10:16:53+01:00",
   "description": "        Anpassung von Plots        # HIDDENimport warnings# Ignore numpy dtype warnings. These warnings are caused by an interaction# between numpy and Cytho...",
   "author": {
     "@type": "Person",
@@ -585,7 +585,7 @@ initFunction(initPrint)
                   <main class="jupyter-page">
     <div id="page-info"><div id="page-title">Anpassung von Plots</div>
 </div>
-    <div class="jb_cell">
+    <div class="jb_cell tag_hide_input">
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -639,7 +639,7 @@ initFunction(initPrint)
 </div>
 </div>
 
-<div class="jb_cell">
+<div class="jb_cell tag_hide_input">
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -662,7 +662,7 @@ initFunction(initPrint)
 </div>
 </div>
 
-<div class="jb_cell">
+<div class="jb_cell tag_hide_output tag_hide_input">
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -697,7 +697,7 @@ initFunction(initPrint)
 </div>
 </div>
 
-<div class="jb_cell">
+<div class="jb_cell tag_hide_input">
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -722,7 +722,7 @@ initFunction(initPrint)
 </div>
 </div>
 
-<div class="jb_cell">
+<div class="jb_cell tag_hide_input">
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -766,9 +766,9 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Although seaborn allows us to quickly create many types of plots, it does not give us fine-grained control over the chart. For example, we cannot use seaborn to modify a plot's title, change x or y-axis labels, or add annotations to a plot. Instead, we must use the matplotlib library that seaborn is based off of.</p>
-<p>matplotlib provides basic building blocks for creating plots in Python. Although it gives great control, it is also more verbose—recreating the seaborn plots from the previous sections in matplotlib would take many lines of code. In fact, we can think of seaborn as a set of useful shortcuts to create matplotlib plots. Although we prefer to prototype plots in seaborn, in order to customize plots for publication we will need to learn basic pieces of matplotlib.</p>
-<p>Before we look at our first simple example, we must activate matplotlib support in the notebook:</p>
+<p>Mithilfe der Library <code>Seaborn</code> kann man einfach viele unterschiedliche Plots bilden, jedoch kann man diese nicht wirklich individuell anpassen. Zum Beispeil kann man nicht den Titel oder die Achsenbeschreibungen des Plots ändern. Um diese Funktionalität zu ermöglichen muss man die Library <code>Matplotlib</code> in Python verwenden, auf dieser auch <code>Seaborn</code> basiert.</p>
+<p><code>Matplotlib</code> bietet viele Low-Level-Funktionen um Plots in Python zu erstellen. Man hat viele Einstellungsmöglichkeiten und Kontrolle, jedoch braucht man in Vergleich zu <code>Seaborn</code> mehr Codezeilen um einen Plot zu erstellen. Darum ist es empfehlenswert Prototypen in <code>Seaborn</code> wegen der Einfachheit zu erzeugen und später diese mittels <code>Matplotlib</code> für eine Publikation mit mehr Details zu erstellen.</p>
+<p>Um <code>Matplotlib</code> zu aktivieren, wird das folgende Import Statement benötigt.</p>
 
 </div>
 </div>
@@ -801,7 +801,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Customizing-Figures-and-Axes">Customizing Figures and Axes<a class="anchor-link" href="#Customizing-Figures-and-Axes"> </a></h4><p>In order to create a plot in matplotlib, we create a figure, then add an axes to the figure. In matplotlib, an axes is a single chart, and figures can contain multiple axes in a tablular layout. An axes contains marks, the lines or patches drawn on the plot.</p>
+<h4 id="Plots-und-Achsen-anpassen">Plots und Achsen anpassen<a class="anchor-link" href="#Plots-und-Achsen-anpassen"> </a></h4><p>Um einen Plot in Matplotlib zu erstellen, erstellen wir eine Figur und fügen dann eine Achse zu der Figur hinzu. In der Matplotlib ist eine Achse ein einzelnes Diagramm, und Plots können mehrere Achsen in einem tabellarischen Layout enthalten.</p>
 
 </div>
 </div>
@@ -896,7 +896,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To customize the plot, we can use other methods on the axes object:</p>
+<p>Um die Darstellung anzupassen, können wir andere Methoden auf dem Achsenobjekt anwenden:</p>
 
 </div>
 </div>
@@ -994,7 +994,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As a shortcut, matplotlib has plotting methods on the plt module itself that will automatically initialize a figure and axes.</p>
+<p>Als Abkürzung verfügt Matplotlib mittels <code>plt</code> Module über mehrere Funktionen, die automatische einen Plot mit Achsen erzeugen.</p>
 
 </div>
 </div>
@@ -1083,7 +1083,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The <code>plt</code> module has analogous methods to an axes, so we can recreate one of the plots above using <code>plt</code> shorthands.</p>
+<p>Das <code>plt</code>-Modul hat analoge Methoden zu einer Achse, so dass wir eine der obigen Darstellungen mit <code>plt</code>-Kurztiteln nachbilden können.</p>
 
 </div>
 </div>
@@ -1142,7 +1142,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Customizing-Marks">Customizing Marks<a class="anchor-link" href="#Customizing-Marks"> </a></h4><p>To change properties of the plot marks themselves (e.g. the lines in the plot above), we can pass additional arguments into plt.plot.</p>
+<h4 id="Linien-anpassen">Linien anpassen<a class="anchor-link" href="#Linien-anpassen"> </a></h4><p>Um die Eigenschaften des Plots zu ändern (z.B. die Linien in der obigen Darstellung), können wir zusätzliche Argumente in plt.plot übergeben.</p>
 
 </div>
 </div>
@@ -1225,9 +1225,10 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Checking the matplotlib documentation is the easiest way to figure out which arguments are available for each method. Another way is to store the returned line object:</p>
+<p>Checking the matplotlib documentation is the easiest way to figure out which arguments are available for each method. Another way is to store the returned line object:
+Die Matplotlib Dokumentation ist die einfachste Möglichkeit um welche Paramter für etwaige Methoden verfügbar sind. Eine andere Möglichkeit ist direkt das Linien-Object zu speichern.</p>
 <p>In [1]: line, = plot([1,2,3])</p>
-<p>These line objects have a lot of properties you can control.</p>
+<p>Diese Linien-Objekte haben eine Vielzahl von Eigenschaften, die gesteurt werden können.</p>
 
 </div>
 </div>
@@ -1238,8 +1239,8 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Aribitrary-text-and-LaTeX-support">Aribitrary text and LaTeX support<a class="anchor-link" href="#Aribitrary-text-and-LaTeX-support"> </a></h3><p>In matplotlib, text can be added either relative to an individual axis object or to the whole figure.</p>
-<p>These commands add text to the Axes:</p>
+<h3 id="Text-and-LaTeX-Unterst&#252;tzung">Text and LaTeX Unterst&#252;tzung<a class="anchor-link" href="#Text-and-LaTeX-Unterst&#252;tzung"> </a></h3><p>In matplotlib, text can be added either relative to an individual In der Matplotlib kann Text entweder relativ zu einem einzelnen Achsenobjekt oder zu der gesamten Figur hinzugefügt werden.</p>
+<p>Die folgenden Befehle geben einen Text zu einer Achse hinzu:</p>
 <ul>
 <li>set_title() - add a title</li>
 <li>set_xlabel() - add an axis label to the x-axis</li>
@@ -1247,13 +1248,13 @@ initFunction(initPrint)
 <li>text() - add text at an arbitrary location</li>
 <li>annotate() - add an annotation, with optional arrow</li>
 </ul>
-<p>And these act on the whole figure:</p>
+<p>Diese Befehle geben eine Text zu ganzen Figur hinzu:</p>
 <ul>
 <li>figtext() - add text at an arbitrary location</li>
 <li>suptitle() - add a title</li>
 </ul>
-<p>And any text field can contain LaTeX expressions for mathematics, as long as they are enclosed in $ signs.</p>
-<p>This example illustrates all of them:</p>
+<p>Jedes Textfeld kann LaTeX Ausdrücke für mathematische Formeln enthalten, solange sie in $ Zeichen eingeschlossen sind.</p>
+<p>Das folgende Beispiel zeigt all diese Funktionen.</p>
 
 </div>
 </div>
@@ -1378,7 +1379,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Customizing-a-seaborn-plot-using-matplotlib">Customizing a seaborn plot using matplotlib<a class="anchor-link" href="#Customizing-a-seaborn-plot-using-matplotlib"> </a></h4><p>Now that we've seen how to use matplotlib to customize a plot, we can use the same methods to customize seaborn plots since seaborn creates plots using matplotlib behind-the-scenes.</p>
+<h4 id="Anpassen-eine-Seaborn-Plot-mittels-Matplotlib">Anpassen eine Seaborn Plot mittels Matplotlib<a class="anchor-link" href="#Anpassen-eine-Seaborn-Plot-mittels-Matplotlib"> </a></h4><p>Jetzt wo wir wissen wie man Plots mit Matplotlib anpassen kann, kann man die selben Funktionen verwenden um Plots mit Seaborn anzupassen, da ja Seaborn im Hintergrund Matplotlib verwendet.</p>
 
 </div>
 </div>
@@ -1522,7 +1523,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We'll start with this plot:</p>
+<p>Fangen wir mit diesem Plot an.</p>
 
 </div>
 </div>
@@ -1615,7 +1616,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can see that the plot needs a title and better labels for the x and y-axes. In addition, the two people with the most expensive fares survived, so we can annotate them on our plot.</p>
+<p>Wir sehen, dass der Plot einen Titel und bessere Labels für die x- und y-Achse braucht. Außerdem wollen wir markieren, dass die beiden Personen mit den teuersten Tickets überlebt haben.</p>
 
 </div>
 </div>
@@ -1716,7 +1717,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In practice, we use seaborn to quickly explore the data and then turn to matplotlib for fine-tuning once we decide on the plots to use in a paper or presentation.</p>
+<p>In der Praxis verwendet man Seaborn, um Daten schnell zu untersuchen. Zur Feinabstimmung wird dann Matplotlib verwendet, um den Plot an die Anforderungen anzupassen.</p>
 
 </div>
 </div>
