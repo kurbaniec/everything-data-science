@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://kurbaniec-tgm.github.io/everything-data-science/data-visualization/anpassung-von-plots.html",
   "headline": "Anpassung von Plots",
-  "datePublished": "2020-01-21T12:50:04+01:00",
-  "dateModified": "2020-01-21T12:50:04+01:00",
+  "datePublished": "2020-01-21T13:14:32+01:00",
+  "dateModified": "2020-01-21T13:14:32+01:00",
   "description": "        Anpassung von Plots        # HIDDENimport warnings# Ignore numpy dtype warnings. These warnings are caused by an interaction# between numpy and Cytho...",
   "author": {
     "@type": "Person",
@@ -766,7 +766,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Mithilfe der Library <code>Seaborn</code> kann man einfach viele unterschiedliche Plots bilden, jedoch kann man diese nicht wirklich individuell anpassen. Zum Beispeil kann man nicht den Titel oder die Achsenbeschreibungen des Plots ändern. Um diese Funktionalität zu ermöglichen muss man die Library <code>Matplotlib</code> in Python verwenden, auf dieser auch <code>Seaborn</code> basiert.</p>
+<p>Mithilfe der Library <code>Seaborn</code> kann man einfach viele unterschiedliche Plots bilden, jedoch kann man diese nicht wirklich individuell anpassen. Zum Beispiel kann man nicht den Titel oder die Achsenbeschreibungen des Plots ändern. Um diese Funktionalität zu ermöglichen muss man die Library <code>Matplotlib</code> in Python verwenden, auf dieser auch <code>Seaborn</code> basiert.</p>
 <p><code>Matplotlib</code> bietet viele Low-Level-Funktionen um Plots in Python zu erstellen. Man hat viele Einstellungsmöglichkeiten und Kontrolle, jedoch braucht man in Vergleich zu <code>Seaborn</code> mehr Codezeilen um einen Plot zu erstellen. Darum ist es empfehlenswert Prototypen in <code>Seaborn</code> wegen der Einfachheit zu erzeugen und später diese mittels <code>Matplotlib</code> für eine Publikation mit mehr Details zu erstellen.</p>
 <p>Um <code>Matplotlib</code> zu aktivieren, wird das folgende Import Statement benötigt.</p>
 
@@ -801,7 +801,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Plots-und-Achsen-anpassen">Plots und Achsen anpassen<a class="anchor-link" href="#Plots-und-Achsen-anpassen"> </a></h3><p>Um einen Plot in Matplotlib zu erstellen, erstellen wir eine Figur und fügen dann eine Achse zu der Figur hinzu. In der Matplotlib ist eine Achse ein einzelnes Diagramm, und Plots können mehrere Achsen in einem tabellarischen Layout enthalten.</p>
+<h3 id="Plots-und-Achsen-anpassen">Plots und Achsen anpassen<a class="anchor-link" href="#Plots-und-Achsen-anpassen"> </a></h3><p>Um einen Plot in Matplotlib zu erstellen, erstellen wir eine Figur und fügen dann eine Achse zu der Figur hinzu. In der Matplotlib ist eine Achse ein einzelnes Diagramm und Plots können mehrere Achsen in einem tabellarischen Layout enthalten.</p>
 
 </div>
 </div>
@@ -1225,8 +1225,7 @@ initFunction(initPrint)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Checking the matplotlib documentation is the easiest way to figure out which arguments are available for each method. Another way is to store the returned line object:
-Die Matplotlib Dokumentation ist die einfachste Möglichkeit um welche Paramter für etwaige Methoden verfügbar sind. Eine andere Möglichkeit ist direkt das Linien-Object zu speichern.</p>
+<p>Die Matplotlib Dokumentation ist die einfachste Möglichkeit um welche Parameter für etwaige Methoden verfügbar sind. Eine andere Möglichkeit ist direkt das Linien-Object zu speichern.</p>
 <p>In [1]: line, = plot([1,2,3])</p>
 <p>Diese Linien-Objekte haben eine Vielzahl von Eigenschaften, die gesteurt werden können.</p>
 
@@ -1239,7 +1238,7 @@ Die Matplotlib Dokumentation ist die einfachste Möglichkeit um welche Paramter 
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Text-and-LaTeX-Unterst&#252;tzung">Text and LaTeX Unterst&#252;tzung<a class="anchor-link" href="#Text-and-LaTeX-Unterst&#252;tzung"> </a></h3><p>In matplotlib, text can be added either relative to an individual In der Matplotlib kann Text entweder relativ zu einem einzelnen Achsenobjekt oder zu der gesamten Figur hinzugefügt werden.</p>
+<h3 id="Text-and-LaTeX-Unterst&#252;tzung">Text and LaTeX Unterst&#252;tzung<a class="anchor-link" href="#Text-and-LaTeX-Unterst&#252;tzung"> </a></h3><p>In Matplotlib kann Text entweder relativ zu einem einzelnen Achsenobjekt oder zu der gesamten Figur hinzugefügt werden.</p>
 <p>Die folgenden Befehle geben einen Text zu einer Achse hinzu:</p>
 <ul>
 <li>set_title() - add a title</li>
@@ -1379,7 +1378,7 @@ Die Matplotlib Dokumentation ist die einfachste Möglichkeit um welche Paramter 
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Anpassen-eine-Seaborn-Plot-mittels-Matplotlib">Anpassen eine Seaborn Plot mittels Matplotlib<a class="anchor-link" href="#Anpassen-eine-Seaborn-Plot-mittels-Matplotlib"> </a></h3><p>Jetzt wo wir wissen wie man Plots mit Matplotlib anpassen kann, kann man die selben Funktionen verwenden um Plots mit Seaborn anzupassen, da ja Seaborn im Hintergrund Matplotlib verwendet.</p>
+<h3 id="Anpassen-eines-Seaborn-Plot-mittels-Matplotlib">Anpassen eines Seaborn Plot mittels Matplotlib<a class="anchor-link" href="#Anpassen-eines-Seaborn-Plot-mittels-Matplotlib"> </a></h3><p>Jetzt wo wir wissen wie man Plots mit Matplotlib anpassen kann, kann man die selben Funktionen verwenden um Plots mit Seaborn anzupassen, da ja Seaborn im Hintergrund Matplotlib verwendet.</p>
 
 </div>
 </div>

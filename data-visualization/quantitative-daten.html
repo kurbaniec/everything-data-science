@@ -26,8 +26,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "https://kurbaniec-tgm.github.io/everything-data-science/data-visualization/quantitative-daten.html",
   "headline": "Quantitative Daten",
-  "datePublished": "2020-01-21T12:50:04+01:00",
-  "dateModified": "2020-01-21T12:50:04+01:00",
+  "datePublished": "2020-01-21T13:14:32+01:00",
+  "dateModified": "2020-01-21T13:14:32+01:00",
   "description": "        Quantitative Daten    Quantitative Daten sind Messwerte die in numerischer Form dargestellt werden.Zur Visualisierung von quantitativen Daten werden ...",
   "author": {
     "@type": "Person",
@@ -691,6 +691,22 @@ initFunction(initPrint)
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The rpy2.ipython extension is already loaded. To reload it, use:
+  %reload_ext rpy2.ipython
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -946,7 +962,7 @@ initFunction(initPrint)
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Weiters kann die Anzahl der "Rechtecke" des Histogramms verändert werden. Eine Erhöhung dieser führt zu einer feinerern Erkennung der Altersgruppen.</p>
-<p>Für R habe eine Funktion <code>breakInterval</code> geschrieben, der den Plot die Anzahl der "Rechtecke" vorschreibt. Nur die gewünschte Anzahl anzugeben führt oft nicht zum gewünschten Ergebniss, da R nicht garantiert, diese einzuhalten.</p>
+<p>Für R habe ich eine Funktion <code>breakInterval</code> geschrieben, die einem Plot die Anzahl der "Rechtecke" vorschreibt. Nur die gewünschte Anzahl anzugeben führt oft nicht zum gewünschten Ergebniss, da R nicht garantiert, diese einzuhalten.</p>
 
 </div>
 </div>
@@ -1030,7 +1046,7 @@ initFunction(initPrint)
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Box-Plots">Box-Plots<a class="anchor-link" href="#Box-Plots"> </a></h2><p>Box-Plots weeden hautpsächlich verwendet, um sich einen Überblick von darliegenden Daten zu verschaffen.</p>
 <p>Ein Box-Plot besteht aus einer Box und einer Antenne bzw. Whisker je links und rechts. Der Anfang der Box stellt das untere Quartil dar, das Ende das obere Quartil. Der Strich in der Mitte bildet den Median ab.</p>
-<p>Je nach Implementierungen füllen die Whishers die komplette Spannweite (gesamter Wertebereich) oder haben eine Längenbegrenzung z.B. das 1,5-Fache des Inerquartilsabstands (Länge der Box). Dann werden alle Werte ausserhalb der Whiskers als Ausreißer interpretiert.</p>
+<p>Je nach Implementierung füllen die Whishers die komplette Spannweite (gesamter Wertebereich) oder haben eine Längenbegrenzung z.B. das 1,5-Fache des Interquartilsabstands (Länge der Box). Dann werden alle Werte ausserhalb der Whiskers als Ausreißer interpretiert.</p>
 <p>Die Darstellung der Fahrpreis des Titanic Datensatz mittels Python und R geschieht sehr ähnlich. Bei R muss man einzig angeben, das man den Plot horizontal anlegen möchte.</p>
 
 </div>
@@ -1309,7 +1325,7 @@ initFunction(initPrint)
 <p>Man erhofft sich durch die Darstellung die Abhängigkeiten zwischen den Merkmalen leicht zu erkennen.</p>
 <p>Bei der Python Funktion wird automatisch eine lineare Regressionsgerade (Zusammenhang zwischen den Merkmalen) und ein Konfidenzinterval von 95% (95% der Schätzungen schließen den erwarteten Wert im Interval ein) um die Regressionsgerade erstellt.</p>
 <p>Achtung: Korrelation (Zusammenhang) bedeutet nicht Kausalität (tatsächliche Auswirkung einer Variable auf die andere).</p>
-<p>In R wird standardmäßig nur das alleinige Streudiagramm ausgeben, Regressionsgerade und Konfigdenzinterval müssen manuell hinzugefügt werden.</p>
+<p>In R wird standardmäßig nur das alleinige Streudiagramm ausgegeben, Regressionsgerade und Konfigdenzinterval müssen manuell hinzugefügt werden.</p>
 
 </div>
 </div>
@@ -1540,7 +1556,7 @@ initFunction(initPrint)
 <p>Weiters können wir die Übersicht des Streudiagramms erhöhen, indem man wie beim Box-Plot die Kategorien angibt.</p>
 <p>In Python gibt man den Namen der Spalte zu Kategoriesierung als Parameter <code>hue</code> an.</p>
 <p>In R muss man wie beim Histogramm drei Funktionsaufrufe machen, wobei <code>plot</code> den "Hauptplot" erstellt und die <code>points</code> Funktionen die restlichen Punkte der zwei übrig gebliebenen Kategorien zum Plot hinzufügen.</p>
-<p>Außerdem muss man einen Wertebereich beim Plot mittels <code>xlim=c(0, 80), ylim=c(0, 550)</code> angebgen, ansonsten sieht man einige Punkte aus dem neu hinzugefügten nicht mehr am Plot.</p>
+<p>Außerdem muss man einen Wertebereich beim Plot mittels <code>xlim=c(0, 80), ylim=c(0, 550)</code> angeben, ansonsten sieht man einige Punkte aus dem neu hinzugefügten nicht mehr am Plot.</p>
 <p>Achtung: Dreimal <code>plot</code> aufzurufen führt zu drei Plots und keinen gemeinsamen, auch wenn <code>add=TRUE</code> angegeben wird.</p>
 
 </div>
